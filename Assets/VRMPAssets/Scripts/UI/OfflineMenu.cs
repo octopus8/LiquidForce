@@ -27,8 +27,8 @@ namespace XRMultiplayer
         [Header("Panel Objects")]
         [SerializeField] GameObject m_CustomizationPanel;
         [SerializeField] GameObject m_ConnectionPanel;
-
-//        VoiceChatManager m_VoiceChatManager;
+        
+        VoiceChatManager m_VoiceChatManager;
 
         private void Awake()
         {
@@ -38,8 +38,8 @@ namespace XRMultiplayer
 
             OfflinePlayerAvatar.voiceAmp.Subscribe(UpdateMicIcon);
 
-            // m_VoiceChatManager = FindFirstObjectByType<VoiceChatManager>();
-            // m_VoiceChatManager.selfMuted.Subscribe(MutedChanged);
+            m_VoiceChatManager = FindFirstObjectByType<VoiceChatManager>();
+            m_VoiceChatManager.selfMuted.Subscribe(MutedChanged);
             SetupPlayerDefaults();
         }
 
@@ -55,7 +55,7 @@ namespace XRMultiplayer
             XRINetworkGameManager.LocalPlayerName.Unsubscribe(SetPlayerName);
             XRINetworkGameManager.LocalPlayerColor.Unsubscribe(SetPlayerColor);
             OfflinePlayerAvatar.voiceAmp.Unsubscribe(UpdateMicIcon);
-//            m_VoiceChatManager.selfMuted.Subscribe(MutedChanged);
+            m_VoiceChatManager.selfMuted.Subscribe(MutedChanged);
 
             XRINetworkGameManager.Instance.connectionFailedAction -= ConnectionFailed;
         }

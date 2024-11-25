@@ -135,13 +135,13 @@ namespace XRMultiplayer
         /// <summary>
         /// Reference to the VoiceChatManager.
         /// </summary>
-//        protected VoiceChatManager m_VoiceChat;
+        protected VoiceChatManager m_VoiceChat;
 
         /// <summary>
         /// Reference to the VivoxParticipant.
         /// </summary>
         protected VivoxParticipant m_VivoxParticipant;
-
+        
         /// <summary>
         /// Time to update the voice position.
         /// </summary>
@@ -164,7 +164,7 @@ namespace XRMultiplayer
 
         protected void Awake()
         {
-//            m_VoiceChat = FindFirstObjectByType<VoiceChatManager>();
+            m_VoiceChat = FindFirstObjectByType<VoiceChatManager>();
             m_VoicePositionCheckTimer = m_VoicePositionUpdateTime;
         }
 
@@ -196,7 +196,7 @@ namespace XRMultiplayer
                         m_PrevHeadPos = m_HeadOrigin.position;
                         if (XRINetworkGameManager.Instance.positionalVoiceChat)
                         {
-//                            m_VoiceChat.Set3DAudio(m_HeadOrigin);
+                            m_VoiceChat.Set3DAudio(m_HeadOrigin);
                         }
                     }
                 }
@@ -226,7 +226,7 @@ namespace XRMultiplayer
                 // Local Name unsubscribe.
                 XRINetworkGameManager.LocalPlayerName.Unsubscribe(UpdateLocalPlayerName);
                 XRINetworkGameManager.LocalPlayerColor.Unsubscribe(UpdateLocalPlayerColor);
-//                m_VoiceChat.selfMuted.Unsubscribe(SelfMutedChanged);
+                m_VoiceChat.selfMuted.Unsubscribe(SelfMutedChanged);
             }
             else if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsConnectedClient)
             {
@@ -299,8 +299,8 @@ namespace XRMultiplayer
             m_PlayerName.Value = new FixedString128Bytes(XRINetworkGameManager.LocalPlayerName.Value);
             XRINetworkGameManager.LocalPlayerColor.Subscribe(UpdateLocalPlayerColor);
             XRINetworkGameManager.LocalPlayerName.Subscribe(UpdateLocalPlayerName);
-            // m_VoiceChat.selfMuted.Subscribe(SelfMutedChanged);
-            // m_VoiceChat.ToggleSelfMute(true, true);
+            m_VoiceChat.selfMuted.Subscribe(SelfMutedChanged);
+            m_VoiceChat.ToggleSelfMute(true, true);
 
             onSpawnedLocal?.Invoke();
         }
@@ -400,20 +400,20 @@ namespace XRMultiplayer
         /// </summary>
         public void SetupVoicePlayer()
         {
-            // m_VivoxParticipant = m_VoiceChat.GetVivoxParticipantById(playerVoiceId);
-            // if (m_VivoxParticipant != null)
-            // {
-            //     m_VivoxParticipant.ParticipantAudioEnergyChanged += ParticipantAudioEnergyChanged;
-            // }
-            // else
-            // {
-            //     Utils.Log($"No Participant with id: {playerVoiceId}", 1);
-            // }
-            //
-            // if (!VoiceChatManager.m_PlayersDictionary.ContainsKey(playerVoiceId))
-            // {
-            //     VoiceChatManager.AddNewVivoxPlayer(playerVoiceId, this);
-            // }
+            m_VivoxParticipant = m_VoiceChat.GetVivoxParticipantById(playerVoiceId);
+            if (m_VivoxParticipant != null)
+            {
+                m_VivoxParticipant.ParticipantAudioEnergyChanged += ParticipantAudioEnergyChanged;
+            }
+            else
+            {
+                Utils.Log($"No Participant with id: {playerVoiceId}", 1);
+            }
+            
+            if (!VoiceChatManager.m_PlayersDictionary.ContainsKey(playerVoiceId))
+            {
+                VoiceChatManager.AddNewVivoxPlayer(playerVoiceId, this);
+            }
         }
         private void ParticipantAudioEnergyChanged()
         {
@@ -427,7 +427,7 @@ namespace XRMultiplayer
             SetupVoicePlayer();
             if (XRINetworkGameManager.Instance.positionalVoiceChat)
             {
-//                m_VoiceChat.Set3DAudio(m_HeadOrigin);
+                m_VoiceChat.Set3DAudio(m_HeadOrigin);
             }
         }
 

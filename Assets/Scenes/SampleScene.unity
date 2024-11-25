@@ -440,8 +440,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: XRI Network Game Manager
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1582222677943591994, guid: 0267a1d338db2bf4c9625e450bbaaad0, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

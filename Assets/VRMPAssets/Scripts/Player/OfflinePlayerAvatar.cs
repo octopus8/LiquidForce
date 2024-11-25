@@ -155,8 +155,9 @@ namespace XRMultiplayer
         void InitMic()
         {
             m_MicInitialized = true;
-            // m_Device ??= Microphone.devices[0];
-            // m_ClipRecord = Microphone.Start(m_Device, true, 999, 44100);
+            m_Device ??= Microphone.devices[0];
+            
+            m_ClipRecord = Microphone.Start(m_Device, true, 999, 44100);
         }
 
         /// <summary>
@@ -167,7 +168,7 @@ namespace XRMultiplayer
             m_MicInitialized = false;
             if (Permission.HasUserAuthorizedPermission(Permission.Microphone))
             {
-//                Microphone.End(m_Device);
+               Microphone.End(m_Device);
             }
             else
             {
@@ -184,7 +185,7 @@ namespace XRMultiplayer
             if (!m_MicInitialized) return 0;
             float levelMax = 0;
             float[] waveData = new float[m_SampleWindow];
-            int micPosition = -1;//Microphone.GetPosition(null) - (m_SampleWindow + 1); // null means the first microphone
+            int micPosition = Microphone.GetPosition(null) - (m_SampleWindow + 1); // null means the first microphone
             if (micPosition < 0) return 0;
             m_ClipRecord.GetData(waveData, micPosition);
             // Getting a peak on the last 128 samples
