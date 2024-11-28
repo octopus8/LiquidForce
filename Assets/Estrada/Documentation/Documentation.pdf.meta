@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a19fb07723ba04cd5b95b7586376be38
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 239889
+  packageName: 'Estrada: Cross-Platform Microphone'
+  packageVersion: 1.0.1
+  assetPath: Assets/Estrada/Documentation/Documentation.pdf
+  uploadId: 631110

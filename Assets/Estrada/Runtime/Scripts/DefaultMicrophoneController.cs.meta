@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 1fa0be5fc44741f2b90d967b70b99541
+timeCreated: 1669364282
+AssetOrigin:
+  serializedVersion: 1
+  productId: 239889
+  packageName: 'Estrada: Cross-Platform Microphone'
+  packageVersion: 1.0.1
+  assetPath: Assets/Estrada/Runtime/Scripts/DefaultMicrophoneController.cs
+  uploadId: 631110

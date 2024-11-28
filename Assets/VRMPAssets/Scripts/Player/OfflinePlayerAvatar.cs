@@ -1,7 +1,10 @@
+using System.Collections;
 using Unity.XR.CoreUtils;
 using Unity.XR.CoreUtils.Bindings.Variables;
 using UnityEngine;
 using UnityEngine.Android;
+
+using Microphone = Estrada.Microphone;
 
 namespace XRMultiplayer
 {
@@ -154,10 +157,18 @@ namespace XRMultiplayer
         /// </summary>
         void InitMic()
         {
+            StartCoroutine(StartDelayed());
+        }
+
+        IEnumerator StartDelayed()
+        {
+            yield return Microphone.RequestPermission();
+
             m_MicInitialized = true;
+
             m_Device ??= Microphone.devices[0];
             
-            m_ClipRecord = Microphone.Start(m_Device, true, 999, 44100);
+            m_ClipRecord = Microphone.Start(m_Device, true, 10, 44100);
         }
 
         /// <summary>

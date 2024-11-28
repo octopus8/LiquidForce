@@ -20,6 +20,8 @@ namespace XRMultiplayer
     /// </summary>
     public class VoiceChatManager : MonoBehaviour
     {
+        private const bool use3DVoice = false;
+        
         /// <summary>
         /// String used to notify the player that they need to enable microphone permissions.
         /// </summary>
@@ -301,9 +303,17 @@ namespace XRMultiplayer
         {
             if (NetworkManager.Singleton.IsConnectedClient & !m_ConnectedToRoom)
             {
-                Channel3DProperties properties = new(AudibleDistance, ConversationalDistance, AudioFadeIntensity, AudioFadeModel);
-                Utils.Log($"{k_DebugPrepend}Joining Voice Channel: {m_CurrentLobbyId}, properties: {properties}");
-                await VivoxService.Instance.JoinPositionalChannelAsync(m_CurrentLobbyId, m_ChatCapability, properties);
+                if (use3DVoice)
+                {
+                    Channel3DProperties properties = new(AudibleDistance, ConversationalDistance, AudioFadeIntensity, AudioFadeModel);
+                    Utils.Log($"{k_DebugPrepend}Joining Voice Channel: {m_CurrentLobbyId}, properties: {properties}");
+                    await VivoxService.Instance.JoinPositionalChannelAsync(m_CurrentLobbyId, m_ChatCapability, properties);
+                }
+                else
+                {
+                    Utils.Log($"{k_DebugPrepend}Joining Voice Channel: {m_CurrentLobbyId}");
+                    await VivoxService.Instance.JoinGroupChannelAsync(m_CurrentLobbyId, m_ChatCapability);
+                }
 
                 // Once connecting, make sure we are still in the game session, if not, disconnect from the voice chat.
                 if (!NetworkManager.Singleton.IsConnectedClient)
