@@ -150,7 +150,7 @@ namespace LiquidForce {
             animCancel = new();
             Color color = fadeMaterial.color;
             color.a = isFadeOut ? 1.0f : 0.0f;
-//            await fadeMaterial.DOColor(color, durationSeconds).WithCancellation(animCancel.Token);
+            await fadeMaterial.DOColor(color, durationSeconds).WithCancellation(animCancel.Token);
         }
 
     }
