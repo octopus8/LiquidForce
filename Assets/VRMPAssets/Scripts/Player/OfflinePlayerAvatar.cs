@@ -145,6 +145,10 @@ namespace XRMultiplayer
             {
                 InitMic();
             }
+            else
+            {
+                LiquidForce.Application.Instance.cameraFader.FadeCameraIn();
+            }
         }
 
         void UpdatePlayerColor(Color color)
@@ -163,6 +167,10 @@ namespace XRMultiplayer
         IEnumerator StartDelayed()
         {
             yield return Microphone.RequestPermission();
+
+            LiquidForce.Application.Instance.cameraFader.FadeCameraIn();
+
+
 
             m_MicInitialized = true;
 
