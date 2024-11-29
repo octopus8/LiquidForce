@@ -8,6 +8,8 @@ namespace LiquidForce
         public static Application Instance;
         public CameraFader cameraFader;
 
+        
+        
         private void Awake()
         {
             Instance = this;
