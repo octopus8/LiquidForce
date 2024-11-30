@@ -147,8 +147,16 @@ namespace XRMultiplayer
             }
             else
             {
-                LiquidForce.Application.Instance.cameraFader.FadeCameraIn();
+//                DoTest();
             }
+        }
+
+
+        IEnumerator DoTestDelayed()
+        {
+            yield return new WaitForSeconds(5);
+            Debug.Log("fading in");
+            StartCoroutine(FadeCameraInDelayed());
         }
 
         void UpdatePlayerColor(Color color)
@@ -168,7 +176,6 @@ namespace XRMultiplayer
         {
             yield return Microphone.RequestPermission();
 
-            LiquidForce.Application.Instance.cameraFader.FadeCameraIn();
 
 
 
@@ -177,6 +184,21 @@ namespace XRMultiplayer
             m_Device ??= Microphone.devices[0];
             
             m_ClipRecord = Microphone.Start(m_Device, true, 10, 44100);
+
+            StartCoroutine(FadeCameraInDelayed());
+        }
+
+        /// <summary>
+        /// Fades the camera in after a small delay.
+        /// </summary>
+        /// <remarks>
+        /// The fade in is done after a delay because to do it without a delay causes a studder.
+        /// </remarks>
+        /// <returns></returns>
+        IEnumerator FadeCameraInDelayed()
+        {
+            yield return new WaitForSeconds(1.0f);
+            LiquidForce.Application.Instance.cameraFader.FadeCameraIn();
         }
 
         /// <summary>

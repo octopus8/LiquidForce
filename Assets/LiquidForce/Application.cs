@@ -28,15 +28,8 @@ namespace LiquidForce
 
         private void Start()
         {
-            StartCoroutine(StartDelayed());
-        }
-
-
-        IEnumerator StartDelayed()
-        {
-            yield return new WaitForSeconds(5);
-            Debug.Log("Fade");
             cameraFader.SetCameraFadedOut();
         }
+        
     }
 }

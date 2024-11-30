@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using System.Threading;
@@ -19,6 +20,8 @@ namespace LiquidForce {
         /// <summary>The fade material.</summary>
         protected static Material fadeMaterial = null;
 
+        protected GameObject cameraFaderRoot;
+
 
         /// <summary>Token that allows for the fade animation to be canceled.</summary>
         static protected CancellationTokenSource animCancel = null;
@@ -28,10 +31,10 @@ namespace LiquidForce {
         /// <summary>
         /// Creates objects, meshes, materials for the camera fader.
         /// </summary>
-        private void Start() {
+        private void Awake() {
 
             // Create objects.
-            GameObject cameraFaderRoot = new GameObject("CameraFader");
+            cameraFaderRoot = new GameObject("CameraFader");
             GameObject cameraFaderOffset = new GameObject("Offset", typeof(MeshRenderer));
             cameraFaderOffset.transform.parent = cameraFaderRoot.transform;
             cameraFaderOffset.transform.localPosition = new Vector3(0, 0, 0.11f);
@@ -68,18 +71,21 @@ namespace LiquidForce {
             fadeMaterial.DisableKeyword("_ALPHAPREMULTIPLY_ON");
             fadeMaterial.SetOverrideTag("RenderType", "Transparent");
             fadeMaterial.SetFloat("_ZWrite", 0.0f);
+            fadeMaterial.SetFloat("_ZTest", 0.0f);
             fadeMaterial.renderQueue = (int)RenderQueue.Transparent;
             fadeMaterial.renderQueue += fadeMaterial.HasProperty("_QueueOffset") ? (int)fadeMaterial.GetFloat("_QueueOffset") : 0;
             fadeMaterial.SetShaderPassEnabled("ShadowCaster", false);
             fadeMaterial.color = new Color(0, 0, 0, 1.0f);
-
+ 
             // Set the material.
             cameraFaderOffset.GetComponent<Renderer>().material = fadeMaterial;
+        }
 
+        private void Start()
+        {
             // Set the object to follow the head.
             Application.Instance.deviceTracking.AddHeadTarget(cameraFaderRoot);
         }
-
 
 
         /// <summary>
