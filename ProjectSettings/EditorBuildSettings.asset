@@ -9,6 +9,8 @@ EditorBuildSettings:
     path: Assets/LiquidForce/StartScene.unity
     guid: 007fed30fb5346e45b75850e9fdedc5c
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 152a4d8ddd9c29448993081a6511cd94,
+      type: 2}
     WebXR.Settings: {fileID: 11400000, guid: 678d456c899b0ab4495209022ce084d4, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 82dd16954ffb37745aa47be9e13716f9,
       type: 2}
