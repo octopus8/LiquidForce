@@ -77,7 +77,7 @@ namespace LiquidForce {
             cameraFaderOffset.GetComponent<Renderer>().material = fadeMaterial;
 
             // Set the object to follow the head.
-//            O8CSystem.Instance.DeviceTracking.AddHeadTarget(cameraFaderRoot);
+            Application.Instance.deviceTracking.AddHeadTarget(cameraFaderRoot);
         }
 
 
