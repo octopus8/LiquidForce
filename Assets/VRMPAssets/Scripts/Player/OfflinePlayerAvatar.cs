@@ -145,6 +145,10 @@ namespace XRMultiplayer
             {
                 InitMic();
             }
+            else
+            {
+                LiquidForce.Application.Instance.OnApplicationReady();
+            }
         }
 
 
@@ -166,6 +170,8 @@ namespace XRMultiplayer
         {
             yield return Microphone.RequestPermission();
             
+            LiquidForce.Application.Instance.OnApplicationReady();
+
             m_MicInitialized = true;
 
             m_Device ??= Microphone.devices[0];

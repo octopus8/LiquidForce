@@ -10,6 +10,10 @@ namespace LiquidForce
     [RequireComponent(typeof(DeviceTracking))]
     public class Application : MonoBehaviour
     {
+
+        [DllImport("__Internal")]
+        private static extern void WebXROnApplicationReady();
+        
         public static Application Instance;
         
         [HideInInspector]
@@ -41,7 +45,10 @@ namespace LiquidForce
             OnXRChange?.Invoke(state);
         }
 
-        
+        public void OnApplicationReady()
+        {
+            WebXROnApplicationReady();
+        }
         
     }
 }

@@ -20,6 +20,13 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
+	  <div id="app-starting-message" >
+		Please Wait...
+	  </div>
+	  <div id="toggle-xr-buttons" >
+        <button id="entervr2" value="Enter VR" disabled>Start VR</button>
+        <button id="enterar2" value="Enter AR" disabled>Start AR</button>
+	  </div>
       <div id="unity-footer">
         <button id="entervr" value="Enter VR" disabled>VR</button>
         <button id="enterar" value="Enter AR" disabled>AR</button>
@@ -48,6 +55,8 @@
       var canvas = document.querySelector("#unity-canvas");
       var canvasContainer = document.querySelector("#unity-canvas-container");
       var loadingBar = document.querySelector("#unity-loading-bar");
+      var startingMessage = document.querySelector("#app-starting-message");
+      var toggleXRButtons = document.querySelector("#toggle-xr-buttons");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var unityInstance = null;
@@ -66,6 +75,7 @@
         }).then((instance) => {
           unityInstance = instance;
           loadingBar.style.display = "none";
+		  startingMessage.style.display = "block";
           if (fullscreenButton)
           {
             fullscreenButton.onclick = () => {
@@ -80,18 +90,33 @@
 
       let enterARButton = document.getElementById('enterar');
       let enterVRButton = document.getElementById('entervr');
+      let enterARButton2 = document.getElementById('enterar2');
+      let enterVRButton2 = document.getElementById('entervr2');
 
       document.addEventListener('onARSupportedCheck', function (event) {
         enterARButton.disabled = !event.detail.supported;
+        enterARButton2.disabled = !event.detail.supported;
       }, false);
       document.addEventListener('onVRSupportedCheck', function (event) {
         enterVRButton.disabled = !event.detail.supported;
+        enterVRButton2.disabled = !event.detail.supported;
+      }, false);
+      document.addEventListener('onApplicationReady', function (event) {
+        startingMessage.style.display = "none";
+        toggleXRButtons.style.display = "block";		
       }, false);
 
       enterARButton.addEventListener('click', function (event) {
         unityInstance.Module.WebXR.toggleAR();
       }, false);
       enterVRButton.addEventListener('click', function (event) {
+        unityInstance.Module.WebXR.toggleVR();
+      }, false);
+	  
+      enterARButton2.addEventListener('click', function (event) {
+        unityInstance.Module.WebXR.toggleAR();
+      }, false);
+      enterVRButton2.addEventListener('click', function (event) {
         unityInstance.Module.WebXR.toggleVR();
       }, false);
     </script>
