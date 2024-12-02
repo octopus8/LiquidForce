@@ -16,7 +16,7 @@ namespace LiquidForce
         
         public static Application Instance;
         
-        public string LogPrepend = "<color=#e5f73b>[Application]</color> ";
+        public string LogPrepend = "<color=#FF5733>[Application]</color> ";
         
         
         [HideInInspector]
