@@ -10,11 +10,14 @@ namespace LiquidForce
     [RequireComponent(typeof(DeviceTracking))]
     public class Application : MonoBehaviour
     {
-
+        
         [DllImport("__Internal")]
         private static extern void WebXROnApplicationReady();
         
         public static Application Instance;
+        
+        public string LogPrepend = "<color=#e5f73b>[Application]</color> ";
+        
         
         [HideInInspector]
         public CameraFader cameraFader;
@@ -47,7 +50,9 @@ namespace LiquidForce
 
         public void OnApplicationReady()
         {
+#if UNITY_WEBGL && !UNITY_EDITOR            
             WebXROnApplicationReady();
+#endif
         }
         
     }

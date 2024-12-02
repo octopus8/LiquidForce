@@ -370,6 +370,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1149903581173863409, guid: 0267a1d338db2bf4c9625e450bbaaad0,
+        type: 3}
+      propertyPath: positionalVoiceChat
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1582222677943591994, guid: 0267a1d338db2bf4c9625e450bbaaad0,
         type: 3}
       propertyPath: m_CheckForAutoReconnect
@@ -1438,6 +1443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d94eae04de9134c99ed1aab43bcce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LogPrepend: '<color=#e5f73b>[Application]</color> '
   cameraFader: {fileID: 0}
   deviceTracking: {fileID: 0}
 --- !u!114 &503592702
