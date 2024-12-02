@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using WebXR;
 
@@ -47,7 +48,7 @@ namespace LiquidForce
             }
             
             playerGameObject.transform.SetPositionAndRotation(startTransform.position, startTransform.rotation);
-            logConsole.transform.SetPositionAndRotation(playerGameObject.transform.position, playerGameObject.transform.rotation);
+//            logConsole.GetComponent<ConfigurationPresenter>().configuration.UpdateLookAtPlayer(true);
             isPlayerInited = true;
             
         }
@@ -65,7 +66,7 @@ namespace LiquidForce
         IEnumerator FadeInDelayed()
         {
             yield return new WaitForSeconds(1);
-            Application.Instance.cameraFader.FadeCameraIn();
+            Application.Instance.cameraFader.FadeCameraIn().Forget();
             Application.Instance.OnXRChange -= OnXRChange;
         }
     }

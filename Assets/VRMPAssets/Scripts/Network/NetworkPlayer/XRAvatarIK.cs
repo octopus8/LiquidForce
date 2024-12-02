@@ -43,6 +43,9 @@ namespace XRMultiplayer
         /// </summary>
         [SerializeField, Tooltip("Speed at which the body rotates.")] float m_RotateSpeed = 3.0f;
 
+        [SerializeField]
+        protected Vector3 headOffsetRotation;
+
         /// <summary>
         /// Transform associated with this script.
         /// </summary>
@@ -53,11 +56,14 @@ namespace XRMultiplayer
         /// </summary>
         float m_DestinationY;
 
+        private Quaternion headOffsetRot;
+
         /// <inheritdoc/>
         private void Start()
         {
             m_Transform = GetComponent<Transform>();
             m_DestinationY = m_HeadTransform.transform.eulerAngles.y;
+            headOffsetRot = Quaternion.Euler(headOffsetRotation);
         }
 
         /// <inheritdoc/>
@@ -66,7 +72,7 @@ namespace XRMultiplayer
             // Update Head.
             m_HeadVisualsRoot.position = m_HeadTransform.position;
             m_HeadVisualsRoot.position -= m_HeadTransform.up * m_HeadHeightOffset;
-            m_Neck.rotation = m_HeadTransform.rotation;
+            m_Neck.rotation = m_HeadTransform.rotation * headOffsetRot;
 
             // Update Body.
             m_Transform.position = m_HeadTransform.position;

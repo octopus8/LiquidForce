@@ -7,7 +7,7 @@ namespace VRLogConsole.Scripts.Presenters.Config
 {
     public class ConfigurationPresenter : PresenterBehaviour
     {
-        [SerializeField] private Configuration configuration;
+        [SerializeField] public Configuration configuration;
         
         protected override void Initialize()
         {

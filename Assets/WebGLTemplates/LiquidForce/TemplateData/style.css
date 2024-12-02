@@ -18,7 +18,7 @@ body { padding: 0; margin: 0 }
 #entervr:disabled { float: right; width: 38px; height: 38px; background-color: #dddddd; display: inline-block; border: 0; }
 #enterar:disabled { float: right; width: 38px; height: 38px; background-color: #dddddd; display: inline-block; border: 0; }
 
-#entervr2:enabled { margin: 10px; float: right; width: 200px; height: 38px; background-color: #1eaed3; display: inline-block; border: 0; font-size:20pt; font-family: arial; }
-#enterar2:enabled { margin: 10px; float: right; width: 200px; height: 38px; background-color: #1eaed3; display: inline-block; border: 0; font-size:20pt; font-family: arial;}
-#entervr2:disabled { margin: 10px; float: right; width: 200px; height: 38px; background-color: #dddddd; display: inline-block; border: 0; font-size:20pt; font-family: arial;}
-#enterar2:disabled { margin: 10px; float: right; width: 200px; height: 38px; background-color: #dddddd; display: inline-block; border: 0; font-size:20pt; font-family: arial;}
+#entervr2:enabled { margin: 10px; float: right; width: 200px; height: 45px; background-color: #1eaed3; display: inline-block; border: 0; font-size:20pt; font-family: arial; }
+#enterar2:enabled { margin: 10px; float: right; width: 200px; height: 45px; background-color: #1eaed3; display: inline-block; border: 0; font-size:20pt; font-family: arial;}
+#entervr2:disabled { margin: 10px; float: right; width: 200px; height: 45px; background-color: #dddddd; display: inline-block; border: 0; font-size:20pt; font-family: arial;}
+#enterar2:disabled { margin: 10px; float: right; width: 200px; height: 45px; background-color: #dddddd; display: inline-block; border: 0; font-size:20pt; font-family: arial;}
