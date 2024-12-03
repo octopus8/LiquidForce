@@ -2568,6 +2568,11 @@ PrefabInstance:
     - target: {fileID: 3803103825494951899, guid: d004666578e8a46159aabeb9675344f2,
         type: 3}
       propertyPath: configuration.lockType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803103825494951899, guid: d004666578e8a46159aabeb9675344f2,
+        type: 3}
+      propertyPath: configuration.lookAtPlayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4035436987279391799, guid: d004666578e8a46159aabeb9675344f2,
