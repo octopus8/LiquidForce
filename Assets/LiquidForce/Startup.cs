@@ -38,22 +38,6 @@ namespace LiquidForce
             StartCoroutine(FadeInDelayed());
 #endif
         }
-/*
-        private int fixedFrameCount = 0;
-        
-        private void FixedUpdate()
-        {
-            if (isPlayerInited || ++fixedFrameCount < 20)
-            {
-                return;
-            }
-            
-            playerGameObject.transform.SetPositionAndRotation(startTransform.position, startTransform.rotation);
-            logConsole.GetComponent<ConfigurationPresenter>().configuration.UpdateLookAtPlayer(true);
-            isPlayerInited = true;
-            
-        }
-*/
 
 
         private void OnXRChange(WebXRState state)
