@@ -15,18 +15,18 @@ namespace LiquidForce
         [SerializeField]
         protected Transform startTransform;
         
-        [SerializeField]
-        protected GameObject logConsole;
+//        [SerializeField]
+//        protected GameObject logConsole;
 
-        [SerializeField]
-        protected bool showLogConsole = true;
+//        [SerializeField]
+//        protected bool showLogConsole = true;
         
-        private bool isPlayerInited = false;
+ //       private bool isPlayerInited = false;
         
 
         private void Awake()
         {
-            logConsole.gameObject.SetActive(showLogConsole);
+//            logConsole.gameObject.SetActive(showLogConsole);
         }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -39,6 +39,7 @@ namespace LiquidForce
 #endif
         }
 
+/*        
         private int fixedFrameCount = 0;
         
         private void FixedUpdate()
@@ -53,7 +54,7 @@ namespace LiquidForce
             isPlayerInited = true;
             
         }
-
+*/
 
 #if UNITY_WEBGL
         private void OnXRChange(WebXRState state)

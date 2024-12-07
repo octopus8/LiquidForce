@@ -1243,8 +1243,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerGameObject: {fileID: 893850830}
   startTransform: {fileID: 2142757194}
-  logConsole: {fileID: 890632097}
-  showLogConsole: 1
 --- !u!224 &454495461 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 264286155042385749, guid: 674209cce4a2ab543af7573fe07dcb94,
@@ -2568,6 +2566,11 @@ PrefabInstance:
     - target: {fileID: 3803103825494951899, guid: d004666578e8a46159aabeb9675344f2,
         type: 3}
       propertyPath: configuration.lockType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803103825494951899, guid: d004666578e8a46159aabeb9675344f2,
+        type: 3}
+      propertyPath: configuration.lookAtPlayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4035436987279391799, guid: d004666578e8a46159aabeb9675344f2,
@@ -2680,12 +2683,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d004666578e8a46159aabeb9675344f2, type: 3}
---- !u!1 &890632097 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3803103825242071341, guid: d004666578e8a46159aabeb9675344f2,
-    type: 3}
-  m_PrefabInstance: {fileID: 890632096}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &893850830 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7174019212652907435, guid: 77ac6b10722bcca4a8baf70e44d89e78,
@@ -3767,7 +3764,6 @@ MonoBehaviour:
   m_RepeatRate: 0.1
   m_TrackedDeviceDragThresholdMultiplier: 2
   m_TrackedScrollDeltaMultiplier: 5
-  m_BypassUIToolkitEvents: 0
   m_ActiveInputMode: 0
   m_EnableXRInput: 1
   m_EnableMouseInput: 1
@@ -9561,6 +9557,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470908853732571505, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: headOffsetRotation.y
+      value: -0.317
       objectReference: {fileID: 0}
     - target: {fileID: 3088556171141835317, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
