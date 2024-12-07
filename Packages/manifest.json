@@ -1,29 +1,23 @@
 {
   "dependencies": {
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
-    "com.de-panther.webxr": "0.22.1",
-    "com.de-panther.webxr-interactions": "0.22.0",
     "com.unity.burst": "1.8.18",
-    "com.unity.collab-proxy": "2.5.2",
+    "com.unity.collab-proxy": "2.6.0",
     "com.unity.feature.development": "1.0.2",
-    "com.unity.ide.rider": "3.0.31",
-    "com.unity.inputsystem": "1.11.2",
-    "com.unity.learn.iet-framework": "4.0.3",
+    "com.unity.learn.iet-framework": "4.0.2",
     "com.unity.multiplayer.center": "1.0.0",
-    "com.unity.netcode.gameobjects": "2.0.0",
+    "com.unity.netcode.gameobjects": "1.10.0",
     "com.unity.render-pipelines.universal": "17.0.3",
     "com.unity.services.authentication": "3.3.3",
     "com.unity.services.lobby": "1.2.2",
-    "com.unity.services.relay": "1.1.1",
-    "com.unity.services.vivox": "16.5.3",
-    "com.unity.test-framework": "1.4.5",
+    "com.unity.services.relay": "1.0.5",
+    "com.unity.services.vivox": "16.5.2",
     "com.unity.transport": "2.3.0",
-    "com.unity.ugui": "2.0.0",
     "com.unity.xr.hands": "1.5.0",
-    "com.unity.xr.interaction.toolkit": "3.0.7",
+    "com.unity.xr.interaction.toolkit": "3.0.6",
     "com.unity.xr.management": "4.5.0",
     "com.unity.xr.oculus": "4.3.0",
-    "com.unity.xr.openxr": "1.13.1",
+    "com.unity.xr.openxr": "1.13.0",
     "com.veriorpies.parrelsync": "https://github.com/VeriorPies/ParrelSync.git?path=/ParrelSync",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
@@ -57,15 +51,5 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  },
-  "scopedRegistries": [
-    {
-      "name": "OpenUPM",
-      "url": "https://package.openupm.com",
-      "scopes": [
-        "com.de-panther"
-      ],
-      "overrideBuiltIns": false
-    }
-  ]
+  }
 }
