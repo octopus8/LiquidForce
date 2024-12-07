@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
+#if UNITY_WEBGL
 using WebXR;
+#endif
 
 namespace LiquidForce
 {
@@ -25,8 +27,9 @@ namespace LiquidForce
         [HideInInspector]
         public DeviceTracking deviceTracking;
 
+#if UNITY_WEBGL
         public Action<WebXRState> OnXRChange;
-        
+#endif        
         
         private void Awake()
         {
@@ -39,15 +42,19 @@ namespace LiquidForce
         private void Start()
         {
             cameraFader.SetCameraFadedOut();
-
+#if UNITY_WEBGL
             WebXRManager.OnXRChange += OnXRChanged;
+#endif
         }
 
+#if UNITY_WEBGL
+        
         private void OnXRChanged(WebXRState state, int viewsCount, Rect leftRect, Rect rightRect)
         {
             OnXRChange?.Invoke(state);
         }
-
+#endif
+        
         public void OnApplicationReady()
         {
 #if UNITY_WEBGL && !UNITY_EDITOR            
