@@ -2591,6 +2591,16 @@ PrefabInstance:
       propertyPath: configuration.lookAtPlayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3803103826840848085, guid: d004666578e8a46159aabeb9675344f2,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803103826840848086, guid: d004666578e8a46159aabeb9675344f2,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4035436987279391799, guid: d004666578e8a46159aabeb9675344f2,
         type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -4376,6 +4386,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2139885910}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2139885914 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8207877637699278635, guid: 78373c2474e657e46b0396ab2980e8dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2139885910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118977136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b9cf54c47f40ee9c3eb30ea8eb89b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2142177139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2884234004177662361, guid: 09dc757e762684c09903fcada323ce30,
@@ -9842,6 +9864,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6354761274679704216, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: m_XRHandTrackingEvents
+      value: 
+      objectReference: {fileID: 2139885914}
     - target: {fileID: 6841791697267637247, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_RaycastMask.m_Bits
