@@ -2799,6 +2799,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 993122389}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1029512837 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2484882586325448242, guid: 5b16ea425f18d76458eca48e0eda15a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1640900607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1033702154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3417,6 +3423,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4607428429233221382}
     m_Modifications:
+    - target: {fileID: 2150932997444834161, guid: 5b16ea425f18d76458eca48e0eda15a1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150932997444834161, guid: 5b16ea425f18d76458eca48e0eda15a1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150932997444834161, guid: 5b16ea425f18d76458eca48e0eda15a1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3639832725745054510, guid: 5b16ea425f18d76458eca48e0eda15a1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6097206852836238121, guid: 5b16ea425f18d76458eca48e0eda15a1,
         type: 3}
       propertyPath: m_Name
@@ -3472,6 +3498,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7116066715132956809, guid: 5b16ea425f18d76458eca48e0eda15a1,
+        type: 3}
+      propertyPath: m_RootTransform
+      value: 
+      objectReference: {fileID: 1029512837}
+    - target: {fileID: 7116066715132956809, guid: 5b16ea425f18d76458eca48e0eda15a1,
+        type: 3}
+      propertyPath: m_JointTransformReferences.Array.data[0].m_JointTransform
+      value: 
+      objectReference: {fileID: 1029512837}
     - target: {fileID: 7917696888053551234, guid: 5b16ea425f18d76458eca48e0eda15a1,
         type: 3}
       propertyPath: m_HandMeshRenderer
