@@ -896,7 +896,7 @@ PrefabInstance:
     - target: {fileID: 2119128821997336139, guid: ffd656bf2a3ba3d41b1e4a94b81b7c85,
         type: 3}
       propertyPath: m_Name
-      value: Left Hand Interaction Visual
+      value: Left Hand Interaction Visual - Ghost00
       objectReference: {fileID: 0}
     - target: {fileID: 4117179676178661330, guid: ffd656bf2a3ba3d41b1e4a94b81b7c85,
         type: 3}

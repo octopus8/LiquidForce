@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0adbeeca-480d-43c7-9d75-f5887e9cb02c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Ghost00/Ghost00 - Left Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Ghost00/Ghost00 - Left Hand.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Ghost00/Ghost00 - Right Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Ghost00/Ghost00 - Right Hand.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Robot00/Prefabs/Robot00 - Left Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Robot00/Prefabs/Robot00 - Left Hand.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Robot00/Prefabs/Robot00 - Right Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Robot00/Prefabs/Robot00 - Right Hand.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/StartScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Hands/Robot00/RobotHandLeft00.00.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Hands/Robot00/RobotHandLeft00.00.blend1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Hands/Robot00/RobotHandLeft00.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Hands/Robot00/RobotHandLeft00.blend1" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +106,7 @@
       <workItem from="1733607911711" duration="421000" />
       <workItem from="1733698583589" duration="547000" />
       <workItem from="1734757634945" duration="114000" />
+      <workItem from="1734845744605" duration="5000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: df2a79c3101053c4c96158183b411487
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 48520
+  packageName: Animated Hands with Gloves + HDRP 2019.3
+  packageVersion: 2.33
+  assetPath: Assets/FirstPersonHands/Prefabs/HDRP/FemaleHand_R_HDRP.prefab
+  uploadId: 354170

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0669f464e3665734bbc08407d82c46ba
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 48520
+  packageName: Animated Hands with Gloves + HDRP 2019.3
+  packageVersion: 2.33
+  assetPath: Assets/FirstPersonHands/Prefabs/HDRP/firstPersonHandsWithGloves_left_BloodMix_HDRP.prefab
+  uploadId: 354170
