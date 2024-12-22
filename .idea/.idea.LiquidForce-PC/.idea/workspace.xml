@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0adbeeca-480d-43c7-9d75-f5887e9cb02c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/LeftHand - Custom.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/LeftHand - Custom.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/LeftHandInteractionVisual - Custom Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/LeftHandInteractionVisual - Custom Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/StartScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +97,7 @@
       <workItem from="1733604466293" duration="610000" />
       <workItem from="1733607911711" duration="421000" />
       <workItem from="1733698583589" duration="547000" />
+      <workItem from="1734757634945" duration="114000" />
     </task>
     <servers />
   </component>

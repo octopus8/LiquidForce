@@ -8109,6 +8109,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left Hand - Robot00
       objectReference: {fileID: 0}
+    - target: {fileID: 4323286683845627934, guid: 0d37cd6ffcc8b1544a38ba33bdc16f32,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323286683845627934, guid: 0d37cd6ffcc8b1544a38ba33bdc16f32,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323286683845627934, guid: 0d37cd6ffcc8b1544a38ba33bdc16f32,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5842440812187412404, guid: 0d37cd6ffcc8b1544a38ba33bdc16f32,
         type: 3}
       propertyPath: m_LocalPosition.x
