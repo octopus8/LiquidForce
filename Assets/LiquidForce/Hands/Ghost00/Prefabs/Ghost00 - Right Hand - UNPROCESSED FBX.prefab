@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 7025554177677360244}
   - component: {fileID: 5559627092848448456}
   m_Layer: 0
-  m_Name: Ghost00 - Right Hand
+  m_Name: Ghost00 - Right Hand - UNPROCESSED FBX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
