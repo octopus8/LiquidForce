@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0adbeeca-480d-43c7-9d75-f5887e9cb02c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Ghost00/Ghost00 - Left Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Ghost00/Ghost00 - Left Hand.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Ghost00/Ghost00 - Right Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Ghost00/Ghost00 - Right Hand.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Robot00/Prefabs/Robot00 - Left Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Robot00/Prefabs/Robot00 - Left Hand.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Robot00/Prefabs/Robot00 - Right Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Robot00/Prefabs/Robot00 - Right Hand.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Glove00/Models/GloveHandRight00.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/Hands/Glove00/Models/GloveHandRight00.fbx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/LiquidForce/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LiquidForce/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Hands/Robot00/RobotHandLeft00.00.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Hands/Robot00/RobotHandLeft00.00.blend1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Hands/Robot00/RobotHandLeft00.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Hands/Robot00/RobotHandLeft00.blend1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/HandsDefaultMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/HandsDefaultMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/TransparentRed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/TransparentRed.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Materials/White.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +108,8 @@
       <workItem from="1733698583589" duration="547000" />
       <workItem from="1734757634945" duration="114000" />
       <workItem from="1734845744605" duration="5000" />
+      <workItem from="1734911031612" duration="22000" />
+      <workItem from="1734915073708" duration="3000" />
     </task>
     <servers />
   </component>
