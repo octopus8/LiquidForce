@@ -35,8 +35,6 @@ namespace LiquidForce
         {
 #if UNITY_WEBGL && !UNITY_EDITOR            
             Application.Instance.OnXRChange += OnXRChange;
-#else
-            StartCoroutine(FadeInDelayed());
 #endif
         }
 
@@ -69,7 +67,7 @@ namespace LiquidForce
         IEnumerator FadeInDelayed()
         {
             yield return new WaitForSeconds(1);
-            Application.Instance.cameraFader.FadeCameraIn().Forget();
+            Application.Instance.cameraFader.FadeCameraIn(2.0f).Forget();
 #if UNITY_WEBGL
             Application.Instance.OnXRChange -= OnXRChange;
 #endif

@@ -11,7 +11,11 @@
         "GUID:84a2d09f0bb073f40922f5ea5362abe7"
     ],
     "includePlatforms": [],
-    "excludePlatforms": [],
+    "excludePlatforms": [
+        "Editor",
+        "WindowsStandalone32",
+        "WindowsStandalone64"
+    ],
     "allowUnsafeCode": true,
     "overrideReferences": false,
     "precompiledReferences": [],
