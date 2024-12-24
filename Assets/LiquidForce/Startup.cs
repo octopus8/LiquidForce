@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+#if UNITY_WEBGL
 using WebXR;
+#endif
 
 namespace LiquidForce
 {
@@ -54,6 +56,7 @@ namespace LiquidForce
         }
 
 
+#if UNITY_WEBGL
 
         private void OnXRChange(WebXRState state)
         {
@@ -62,12 +65,14 @@ namespace LiquidForce
                 StartCoroutine(FadeInDelayed());
             }
         }
-
+#endif
         IEnumerator FadeInDelayed()
         {
             yield return new WaitForSeconds(1);
             Application.Instance.cameraFader.FadeCameraIn().Forget();
+#if UNITY_WEBGL
             Application.Instance.OnXRChange -= OnXRChange;
+#endif
         }
     }
     
