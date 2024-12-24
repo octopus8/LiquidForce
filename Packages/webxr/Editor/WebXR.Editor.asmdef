@@ -5,12 +5,10 @@
         "GUID:fd4abe4ffe74ef1448afe15c6cb36bb7",
         "GUID:f9fe0089ec81f4079af78eb2287a6163"
     ],
-    "includePlatforms": [],
-    "excludePlatforms": [
-        "Editor",
-        "WindowsStandalone32",
-        "WindowsStandalone64"
+    "includePlatforms": [
+        "Editor"
     ],
+    "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [],
