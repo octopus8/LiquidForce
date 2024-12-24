@@ -2568,7 +2568,12 @@ PrefabInstance:
     - target: {fileID: 3803103825494951899, guid: d004666578e8a46159aabeb9675344f2,
         type: 3}
       propertyPath: configuration.lockType
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803103826840848085, guid: d004666578e8a46159aabeb9675344f2,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4035436987279391799, guid: d004666578e8a46159aabeb9675344f2,
         type: 3}
