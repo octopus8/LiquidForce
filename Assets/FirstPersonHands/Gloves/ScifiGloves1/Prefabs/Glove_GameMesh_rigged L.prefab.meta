@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 830956d5320ce7a4e94b09351188a44d
+timeCreated: 1535037606
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 48520
+  packageName: Animated Hands with Gloves + HDRP 2019.3
+  packageVersion: 2.33
+  assetPath: Assets/FirstPersonHands/Gloves/ScifiGloves1/Prefabs/Glove_GameMesh_rigged
+    L.prefab
+  uploadId: 354170

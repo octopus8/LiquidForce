@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 35273d5712eeced4895f80da7dcd46b2
+timeCreated: 1488662013
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 48520
+  packageName: Animated Hands with Gloves + HDRP 2019.3
+  packageVersion: 2.33
+  assetPath: Assets/FirstPersonHands/FirstPersonHandsWithGloves/MaterialsAndTextures/HDRP/ArmWithGlove_noBloodMixer_HDRP.mat
+  uploadId: 354170

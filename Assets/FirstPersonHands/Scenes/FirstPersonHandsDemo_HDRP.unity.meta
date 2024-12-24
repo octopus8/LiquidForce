@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 657bff5fd6625464bb9c3026383f4f27
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 48520
+  packageName: Animated Hands with Gloves + HDRP 2019.3
+  packageVersion: 2.33
+  assetPath: Assets/FirstPersonHands/Scenes/FirstPersonHandsDemo_HDRP.unity
+  uploadId: 354170
