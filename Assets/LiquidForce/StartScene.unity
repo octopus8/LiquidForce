@@ -11007,7 +11007,7 @@ PrefabInstance:
     - target: {fileID: 5415803175819390677, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_DebugDrawJoints
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5481505349926868397, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
