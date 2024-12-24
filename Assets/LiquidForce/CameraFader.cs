@@ -161,6 +161,7 @@ namespace LiquidForce {
             color.a = isFadeOut ? 1.0f : 0.0f;
             cameraFaderRoot.SetActive(true);
             await fadeMaterial.DOColor(color, durationSeconds).WithCancellation(animCancel.Token);
+            cameraFaderRoot.SetActive(!isFadeOut);
         }
 
     }
