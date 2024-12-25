@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LiquidForce/StartScene.unity
+    path: Assets/[LiquidForce]/StartScene.unity
     guid: 007fed30fb5346e45b75850e9fdedc5c
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
