@@ -7,22 +7,6 @@
       "dependencies": {},
       "hash": "f9fd769be7c634610f2a61aa914a1a55f34740e1"
     },
-    "com.de-panther.webxr": {
-      "version": "file:webxr",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "com.unity.xr.management": "3.2.13"
-      }
-    },
-    "com.de-panther.webxr-interactions": {
-      "version": "file:webxr-interactions",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "com.de-panther.webxr": "0.22.0"
-      }
-    },
     "com.unity.burst": {
       "version": "1.8.18",
       "depth": 0,
