@@ -97,6 +97,7 @@ namespace LiquidForce {
                 animCancel.Dispose();
                 animCancel = null;
             }
+            cameraFaderRoot.SetActive(false);
             Color color = fadeMaterial.color;
             color.a = 0.0f;
             fadeMaterial.color = color;
@@ -113,6 +114,7 @@ namespace LiquidForce {
                 animCancel.Dispose();
                 animCancel = null;
             }
+            cameraFaderRoot.SetActive(true);
             Color color = fadeMaterial.color;
             color.a = 1.0f;
             fadeMaterial.color = color;
@@ -156,7 +158,9 @@ namespace LiquidForce {
             animCancel = new();
             Color color = fadeMaterial.color;
             color.a = isFadeOut ? 1.0f : 0.0f;
+            cameraFaderRoot.SetActive(true);
             await fadeMaterial.DOColor(color, durationSeconds).WithCancellation(animCancel.Token);
+            cameraFaderRoot.SetActive(isFadeOut);
         }
 
     }
