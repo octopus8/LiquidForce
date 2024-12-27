@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ae7e78fae30132744a0c87ef3b3f4254
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 212100
+  packageName: Rigged VR hands
+  packageVersion: 1.0.2
+  assetPath: Assets/Animvs Game Studio/VR Hands/Models/BigFoot/textures/M_bigfoot_skin.mat
+  uploadId: 494521

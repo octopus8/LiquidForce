@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 94462cb3e6e143840850ca7341c2d3e4
+timeCreated: 1529307524
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 48520
+  packageName: Animated Hands with Gloves + HDRP 2019.3
+  packageVersion: 2.33
+  assetPath: Assets/FirstPersonHands/Scenes/Sky.mat
+  uploadId: 354170

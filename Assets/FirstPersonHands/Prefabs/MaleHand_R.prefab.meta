@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d619698dcc4774541b1ea6b25ab958b3
+timeCreated: 1536684756
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 48520
+  packageName: Animated Hands with Gloves + HDRP 2019.3
+  packageVersion: 2.33
+  assetPath: Assets/FirstPersonHands/Prefabs/MaleHand_R.prefab
+  uploadId: 354170

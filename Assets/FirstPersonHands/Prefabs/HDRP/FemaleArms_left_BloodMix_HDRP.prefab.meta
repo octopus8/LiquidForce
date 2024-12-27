@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1df212a12ca0c61428afe3e6c781c746
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 48520
+  packageName: Animated Hands with Gloves + HDRP 2019.3
+  packageVersion: 2.33
+  assetPath: Assets/FirstPersonHands/Prefabs/HDRP/FemaleArms_left_BloodMix_HDRP.prefab
+  uploadId: 354170

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f727d25200696e64e8f56e41662a90aa
+timeCreated: 1470310377
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 48520
+  packageName: Animated Hands with Gloves + HDRP 2019.3
+  packageVersion: 2.33
+  assetPath: Assets/FirstPersonHands/MaleHands/firstPersonHand_Materials/HandArm_BloodMixer_FlippedGreen.mat
+  uploadId: 354170

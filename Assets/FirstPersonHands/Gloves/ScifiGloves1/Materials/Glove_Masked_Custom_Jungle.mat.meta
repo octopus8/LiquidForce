@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b6153bcb0ecabc342a6c1e52094efc5d
+timeCreated: 1534952295
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 48520
+  packageName: Animated Hands with Gloves + HDRP 2019.3
+  packageVersion: 2.33
+  assetPath: Assets/FirstPersonHands/Gloves/ScifiGloves1/Materials/Glove_Masked_Custom_Jungle.mat
+  uploadId: 354170
