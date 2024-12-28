@@ -1494,11 +1494,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left Hand - Ghost00
       objectReference: {fileID: 0}
-    - target: {fileID: 2365317456457493816, guid: 85ff34a51b7d924409bf5755560f501e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5718285637092832894, guid: 85ff34a51b7d924409bf5755560f501e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1566,11 +1561,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Left Hand - Robot00
-      objectReference: {fileID: 0}
-    - target: {fileID: 3429237168257112930, guid: 0d37cd6ffcc8b1544a38ba33bdc16f32,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5842440812187412404, guid: 0d37cd6ffcc8b1544a38ba33bdc16f32,
         type: 3}
@@ -1866,12 +1856,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LeftHand
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7601756084836896305}
     - target: {fileID: 2630688503350210231, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_RightHand
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4977700906452525549}
     - target: {fileID: 3088556171141835317, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -2720,6 +2710,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66832c7740a96a5469daf4155115d11f, type: 3}
+--- !u!1 &4977700906452525549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3382968454612714908, guid: 66832c7740a96a5469daf4155115d11f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4977700906452525548}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5641622276335775652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 54698371848097488, guid: f300f7b935a7847bb9f64ba531db6d4d,
@@ -2794,6 +2790,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 543878c0c3b547a46ba02ce6d06de053, type: 3}
+--- !u!1 &7601756084836896305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4349088908478319146, guid: 543878c0c3b547a46ba02ce6d06de053,
+    type: 3}
+  m_PrefabInstance: {fileID: 7601756084836896304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7955251914641847612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5718285637092832894, guid: 85ff34a51b7d924409bf5755560f501e,
