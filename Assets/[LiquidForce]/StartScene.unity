@@ -672,20 +672,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7801334315794471193, guid: deb323e11822ade41ba63aaa962a224c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 8033378475660186850, guid: deb323e11822ade41ba63aaa962a224c,
         type: 3}
       propertyPath: m_Name
       value: Right Hand - Robot00
-      objectReference: {fileID: 0}
-    - target: {fileID: 8033378475660186850, guid: deb323e11822ade41ba63aaa962a224c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1654,11 +1644,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Hand - Ghost00
       objectReference: {fileID: 0}
-    - target: {fileID: 478977774926207479, guid: a01cd2d5c4f9f444e8156e95b09e48e6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7955251915750791368, guid: a01cd2d5c4f9f444e8156e95b09e48e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1707,16 +1692,6 @@ PrefabInstance:
     - target: {fileID: 7955251915750791368, guid: a01cd2d5c4f9f444e8156e95b09e48e6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8852578164653593686, guid: a01cd2d5c4f9f444e8156e95b09e48e6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8852578164653593686, guid: a01cd2d5c4f9f444e8156e95b09e48e6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
