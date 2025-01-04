@@ -898,6 +898,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GhostHandLeft00
       objectReference: {fileID: 0}
+    - target: {fileID: 4849393385929907967, guid: 3e0812d0c4770b94dacf6b48c0226b50,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8879528566716807029, guid: 3e0812d0c4770b94dacf6b48c0226b50,
         type: 3}
       propertyPath: m_LocalRotation.w
