@@ -1,13 +1,10 @@
-using System;
 using System.Collections;
 using UnityEngine;
-#if UNITY_WEBGL
-using WebXR;
-#endif
 
 namespace LiquidForce
 {
-    public class Startup : MonoBehaviour
+
+    public class StartScene : MonoBehaviour
     {
         [SerializeField]
         protected GameObject playerGameObject;
@@ -21,7 +18,7 @@ namespace LiquidForce
 //        [SerializeField]
 //        protected bool showLogConsole = true;
         
- //       private bool isPlayerInited = false;
+        //       private bool isPlayerInited = false;
         
 
         private void Awake()
@@ -39,20 +36,20 @@ namespace LiquidForce
 #endif
         }
 
-/*        
+/*
         private int fixedFrameCount = 0;
-        
+
         private void FixedUpdate()
         {
             if (isPlayerInited || ++fixedFrameCount < 2)
             {
                 return;
             }
-            
+
             playerGameObject.transform.SetPositionAndRotation(startTransform.position, startTransform.rotation);
             logConsole.transform.SetPositionAndRotation(playerGameObject.transform.position, playerGameObject.transform.rotation);
             isPlayerInited = true;
-            
+
         }
 */
 
@@ -69,13 +66,11 @@ namespace LiquidForce
         IEnumerator FadeInDelayed()
         {
             yield return new WaitForSeconds(1);
-            Application.Instance.cameraFader.FadeCameraIn();
+            Application.Instance.cameraFader.FadeCameraIn(5.0f);
 #if UNITY_WEBGL
             
             Application.Instance.OnXRChange -= OnXRChange;
 #endif
         }
     }
-    
 }
-
