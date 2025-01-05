@@ -1816,6 +1816,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 4607428429233221383}
+    - target: {fileID: 2140178427781822919, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140178427781822919, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: XRMultiplayer.PlayerOptions, VRMP
       objectReference: {fileID: 0}
     - target: {fileID: 2470908853732571505, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
@@ -2585,7 +2595,6 @@ PrefabInstance:
     - {fileID: 5133795882794781798, guid: 77ac6b10722bcca4a8baf70e44d89e78, type: 3}
     - {fileID: 2699295885192630998, guid: 77ac6b10722bcca4a8baf70e44d89e78, type: 3}
     - {fileID: 7330706276068014619, guid: 77ac6b10722bcca4a8baf70e44d89e78, type: 3}
-    - {fileID: 2630166069285867003, guid: 77ac6b10722bcca4a8baf70e44d89e78, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8383550645208223445, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
@@ -2605,6 +2614,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4607428429233221380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4607428429233221383 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6204660889144888484, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+    type: 3}
+  m_PrefabInstance: {fileID: 4607428429233221380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0744eb7de4f61b44b11f87f9ab77757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4607428429233221385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8383550645295993588, guid: 77ac6b10722bcca4a8baf70e44d89e78,
