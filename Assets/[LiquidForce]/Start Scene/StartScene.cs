@@ -1,5 +1,8 @@
 using System.Collections;
 using UnityEngine;
+#if UNITY_WEBGL
+using WebXR;
+#endif
 
 namespace LiquidForce
 {
