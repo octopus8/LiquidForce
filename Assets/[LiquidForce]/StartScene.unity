@@ -1479,10 +1479,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 493927183}
     m_Modifications:
+    - target: {fileID: 1348319592053725243, guid: 85ff34a51b7d924409bf5755560f501e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2365317456457493816, guid: 85ff34a51b7d924409bf5755560f501e,
         type: 3}
       propertyPath: m_Name
       value: Left Hand - Ghost00
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365317456457493816, guid: 85ff34a51b7d924409bf5755560f501e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5718285637092832894, guid: 85ff34a51b7d924409bf5755560f501e,
         type: 3}
