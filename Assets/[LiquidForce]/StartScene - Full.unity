@@ -13570,7 +13570,7 @@ GameObject:
   - component: {fileID: 1897170996}
   - component: {fileID: 1897170995}
   m_Layer: 0
-  m_Name: Locations (Toggle) (1)
+  m_Name: Locations (Toggle)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21505,6 +21505,16 @@ PrefabInstance:
       propertyPath: 'm_Panels.Array.data[4]'
       value: 
       objectReference: {fileID: 607142231}
+    - target: {fileID: 6204660889144888484, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: m_PanelToggles.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204660889144888484, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: 'm_PanelToggles.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1897171000}
     - target: {fileID: 6354761274679704216, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_XRHandTrackingEvents
