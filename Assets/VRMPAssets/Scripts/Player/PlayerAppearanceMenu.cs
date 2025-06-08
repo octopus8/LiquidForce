@@ -13,6 +13,7 @@ namespace XRMultiplayer
         [SerializeField] Color[] m_PlayerColors;
         [SerializeField] TMP_InputField m_PlayerNameInputField;
         [SerializeField] Image m_PlayerIconColor;
+        [SerializeField] HandData[] handData;
 
 
         void Awake()
