@@ -13,7 +13,11 @@ namespace XRMultiplayer
         [SerializeField] Color[] m_PlayerColors;
         [SerializeField] TMP_InputField m_PlayerNameInputField;
         [SerializeField] Image m_PlayerIconColor;
-        [SerializeField] HandData[] handData;
+
+        [SerializeField] private GameObject mainSelection;
+        [SerializeField] private GameObject handOptions;
+        
+        public HandData[] HandData;
 
 
         void Awake()
@@ -69,6 +73,12 @@ namespace XRMultiplayer
         void SetPlayerColor(Color color)
         {
             m_PlayerIconColor.color = color;
+        }
+
+        public void Reset()
+        {
+            mainSelection.SetActive(true);
+            handOptions.SetActive(false);
         }
     }
 }

@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0adbeeca-480d-43c7-9d75-f5887e9cb02c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Prefabs/UIPrefabs/MenuUI/Player_Menu_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Prefabs/UIPrefabs/MenuUI/Player_Menu_UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Prefabs/UIPrefabs/Player_Appearance_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Prefabs/UIPrefabs/Player_Appearance_UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Network/NetworkManagers/VoiceChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Network/NetworkManagers/VoiceChatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Player/OfflinePlayerAvatar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Player/OfflinePlayerAvatar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Player/PlayerAppearanceMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Player/PlayerAppearanceMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Tutorial/TutorialMaterials/Video_Material_Unlit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Tutorial/TutorialMaterials/Video_Material_Unlit.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Application.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Application.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/VRMP.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/VRMP.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/HandData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/HandData.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/LiquidForce.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/LiquidForce.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/StartScene - Full.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/StartScene - Full.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/WebXR.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/WebXR.jslib.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +26,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/[LiquidForce]/HandOption.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[LiquidForce]/Hands/HandData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/[LiquidForce]/LocationPanelOptionDataEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Runtime/TMP/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit/Runtime/Inputs/XRInputModalityManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit/Runtime/Interaction/Interactors/XRInteractionGroup.cs" root0="SKIP_HIGHLIGHTING" />
@@ -133,7 +135,8 @@
       <workItem from="1736141759109" duration="957000" />
       <workItem from="1749102376575" duration="631000" />
       <workItem from="1749187131144" duration="1251000" />
-      <workItem from="1749361025362" duration="6413000" />
+      <workItem from="1749361025362" duration="7137000" />
+      <workItem from="1749535028998" duration="4295000" />
     </task>
     <servers />
   </component>

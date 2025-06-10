@@ -310,9 +310,7 @@ namespace XRMultiplayer
                 else
                 {
                     Utils.Log($"{k_DebugPrepend}Joining Voice Channel: {m_CurrentLobbyId}");
-                    Debug.Log($"{LiquidForce.Application.Instance.LogPrepend} Joining voice channel.");
                     await VivoxService.Instance.JoinGroupChannelAsync(m_CurrentLobbyId, m_ChatCapability);
-                    Debug.Log($"{LiquidForce.Application.Instance.LogPrepend} JoinGroupChannelAsync returned.");
                 }
 
                 // Once connecting, make sure we are still in the game session, if not, disconnect from the voice chat.
