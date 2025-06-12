@@ -3313,6 +3313,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409801569}
   m_CullTransparentMesh: 1
+--- !u!1 &421989566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6466807859209963913, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+    type: 3}
+  m_PrefabInstance: {fileID: 4607428429233221380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &426756451
 GameObject:
   m_ObjectHideFlags: 0
@@ -12110,12 +12116,6 @@ MonoBehaviour:
 --- !u!1 &1712208565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1214356786577677925, guid: 77ac6b10722bcca4a8baf70e44d89e78,
-    type: 3}
-  m_PrefabInstance: {fileID: 4607428429233221380}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1712208566 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4611141375806386847, guid: 77ac6b10722bcca4a8baf70e44d89e78,
     type: 3}
   m_PrefabInstance: {fileID: 4607428429233221380}
   m_PrefabAsset: {fileID: 0}
@@ -20984,6 +20984,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1044995149204488095, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 154.055
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044995149204488095, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044995149204488095, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 154.055
       objectReference: {fileID: 0}
@@ -21025,7 +21035,7 @@ PrefabInstance:
     - target: {fileID: 1214356786577677925, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1339823300485290393, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
@@ -21328,6 +21338,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4476961879192084582, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476961879192084582, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476961879192084582, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476961879192084582, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4611141375806386847, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_IsActive
@@ -21557,7 +21587,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1712208566}
+      objectReference: {fileID: 421989566}
     - target: {fileID: 5789371472670108677, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -21645,6 +21675,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
+      propertyPath: HandData.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: HandData.Array.data[0].name
+      value: Default
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: HandData.Array.data[1].name
+      value: Glove
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: HandData.Array.data[2].name
+      value: Robot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: HandData.Array.data[0].leftHand
+      value: 
+      objectReference: {fileID: 2017856266552769589}
+    - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: HandData.Array.data[1].leftHand
+      value: 
+      objectReference: {fileID: 7601756084836896305}
+    - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: HandData.Array.data[2].leftHand
+      value: 
+      objectReference: {fileID: 2781798449037653808}
+    - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
       propertyPath: handData.Array.data[0].leftHand
       value: 
       objectReference: {fileID: 2017856266552769589}
@@ -21658,6 +21723,21 @@ PrefabInstance:
       propertyPath: handData.Array.data[2].leftHand
       value: 
       objectReference: {fileID: 7601756084836896305}
+    - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: HandData.Array.data[0].rightHand
+      value: 
+      objectReference: {fileID: 4494073384808283519}
+    - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: HandData.Array.data[1].rightHand
+      value: 
+      objectReference: {fileID: 4977700906452525549}
+    - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+        type: 3}
+      propertyPath: HandData.Array.data[2].rightHand
+      value: 
+      objectReference: {fileID: 588691778}
     - target: {fileID: 6461594942945379797, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: handData.Array.data[0].rightHand

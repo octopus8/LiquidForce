@@ -19,7 +19,7 @@ public class HandOptions : MonoBehaviour
         foreach (var handData in appearanceMenu.HandData)
         {
             GameObject optionGO = Instantiate(prototypeOption, prototypeOption.transform.parent);
-            LocationsPanelOption option = optionGO.GetComponent<LocationsPanelOption>();
+            var option = optionGO.GetComponent<HandOption>();
             option.title.text = handData.name;
             optionGO.SetActive(true);
         }

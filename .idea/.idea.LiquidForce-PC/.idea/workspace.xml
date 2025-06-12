@@ -6,15 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0adbeeca-480d-43c7-9d75-f5887e9cb02c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Prefabs/UIPrefabs/MenuUI/Player_Menu_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Prefabs/UIPrefabs/MenuUI/Player_Menu_UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Prefabs/UIPrefabs/Player_Appearance_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Prefabs/UIPrefabs/Player_Appearance_UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Network/NetworkManagers/VoiceChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Network/NetworkManagers/VoiceChatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Player/OfflinePlayerAvatar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Player/OfflinePlayerAvatar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Player/PlayerAppearanceMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Scripts/Player/PlayerAppearanceMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/VRMP.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/VRMP.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/HandData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/HandData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/LiquidForce.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/LiquidForce.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/StartScene - Full.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/StartScene - Full.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,6 +129,7 @@
       <workItem from="1749187131144" duration="1251000" />
       <workItem from="1749361025362" duration="7137000" />
       <workItem from="1749535028998" duration="4295000" />
+      <workItem from="1749706859723" duration="565000" />
     </task>
     <servers />
   </component>
