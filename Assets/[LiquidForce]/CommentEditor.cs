@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
 namespace O8C
 {
 	[CustomEditor(typeof(Comment))]
@@ -122,3 +123,4 @@ namespace O8C
 		}
 	}
 }
+#endif

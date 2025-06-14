@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 13f6f87036926f94ab0417ca1b31725c
-  - enabled: 1
+  - enabled: 0
     path: Assets/[LiquidForce]/StartScene 2.unity
     guid: c021fd88f0c9ced45abb87e182840037
-  - enabled: 0
+  - enabled: 1
     path: Assets/[LiquidForce]/StartScene - Full.unity
     guid: 70de9ed6a29878a48a134f076f6962f8
   m_configObjects:

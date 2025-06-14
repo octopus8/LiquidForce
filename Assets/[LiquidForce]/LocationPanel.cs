@@ -16,7 +16,7 @@ public class LocationPanel : MonoBehaviour
         
         GameObject optionGO = Instantiate(prototypeOption, prototypeOption.transform.parent);
         LocationsPanelOption option = optionGO.GetComponent<LocationsPanelOption>();
-        option.title.text = locations[0].name;
+        option.title.text = locations[0].sceneName;
         optionGO.SetActive(true);
     }
 
