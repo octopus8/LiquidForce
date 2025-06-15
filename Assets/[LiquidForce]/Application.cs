@@ -3,6 +3,7 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using O8C;
 using UnityEngine;
+using XRMultiplayer;
 #if UNITY_WEBGL
 using WebXR;
 #endif
@@ -32,6 +33,10 @@ namespace LiquidForce
         public Action<WebXRState> OnXRChange;
 #endif        
         
+        [SerializeField]
+        private OfflinePlayerAvatar offlinePlayerAvatar;
+        
+        
         private void Awake()
         {
             Instance = this;
@@ -42,6 +47,8 @@ namespace LiquidForce
 
         private void Start()
         {
+            offlinePlayerAvatar.OnMicrophonePermissionsCompleted.AddListener(OnApplicationReady);
+            
             cameraFader.SetCameraFadedOut();
 #if UNITY_WEBGL
             WebXRManager.OnXRChange += OnXRChanged;

@@ -3,7 +3,7 @@ using Unity.XR.CoreUtils;
 using Unity.XR.CoreUtils.Bindings.Variables;
 using UnityEngine;
 using UnityEngine.Android;
-
+using UnityEngine.Events;
 using Microphone = Estrada.Microphone;
 
 namespace XRMultiplayer
@@ -85,6 +85,8 @@ namespace XRMultiplayer
 
         bool m_MicInitialized = false;
 
+        public UnityEvent OnMicrophonePermissionsCompleted = new ();
+
         /// <inheritdoc/>
         void Start()
         {
@@ -147,7 +149,7 @@ namespace XRMultiplayer
             }
             else
             {
-//                LiquidForce.Application.Instance.OnApplicationReady();
+                OnMicrophonePermissionsCompleted?.Invoke();
             }
         }
 
@@ -170,7 +172,7 @@ namespace XRMultiplayer
         {
             yield return Microphone.RequestPermission();
             
-//            LiquidForce.Application.Instance.OnApplicationReady();
+            OnMicrophonePermissionsCompleted?.Invoke();
 
             m_MicInitialized = true;
 
