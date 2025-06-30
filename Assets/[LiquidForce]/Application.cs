@@ -22,6 +22,7 @@ namespace LiquidForce
         
         public string LogPrepend = "<color=#e5f73b>[Application]</color> ";
         
+        public PlayerSettings PlayerSettings;
         
         [HideInInspector]
         public CameraFader cameraFader;
@@ -43,6 +44,8 @@ namespace LiquidForce
 
             cameraFader = GetComponent<CameraFader>();
             deviceTracking = GetComponent<DeviceTracking>();
+            
+            PlayerSettings = new PlayerSettings();
         }
 
         private void Start()

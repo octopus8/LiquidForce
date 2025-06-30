@@ -17,8 +17,6 @@ namespace XRMultiplayer
         [SerializeField] private GameObject mainSelection;
         [SerializeField] private GameObject handOptions;
         
-        public HandData[] HandData;
-
 
         void Awake()
         {
