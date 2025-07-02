@@ -9,98 +9,148 @@ using WebXR;
 
 namespace LiquidForce
 {
+    /// <summary>
+    /// The main application class.
+    /// </summary>
+    /// <remarks>
+    /// - Application Ready
+    ///   - To avoid entering VR in web, then having the microphone permissions return the view to 2D, the app waits until
+    /// the microphone permissions process has completed before allowing the user to enter VR.
+    /// </remarks>
     [RequireComponent(typeof(CameraFader))]
     [RequireComponent(typeof(DeviceTracking))]
     public class Application : MonoBehaviour
     {
-        
+        /// <summary>Dispatches the 'onApplicationReady' event to JavaScript.</summary>
+#if UNITY_WEBGL        
         [DllImport("__Internal")]
         private static extern void WebXROnApplicationReady();
-        
-        public static Application Instance;
-        
-        public string LogPrepend = "<color=#e5f73b>[Application]</color> ";
-        
-        
-        
-        [HideInInspector]
-        public CameraFader cameraFader;
-        
-        [HideInInspector]
-        public DeviceTracking deviceTracking;
-
-#if UNITY_WEBGL
-        public Action<WebXRState> OnXRChange;
 #endif        
-        
+
+        /// <summary>The `OfflinePlayerAvatar` component. This is used to detect when the application is ready.</summary>
         [SerializeField]
         private OfflinePlayerAvatar offlinePlayerAvatar;
         
-        /// <summary>The hand data.</summary>
-        [Tooltip("The hand data.")]
+        /// <summary>An array of `HandData` ScriptableObjects that hold hand data.</summary>
+        [Tooltip("An array of `HandData` ScriptableObjects that hold hand data.")]
         [field: SerializeField]
-        public HandData[] HandData { get; private set; }
+        public AppHandData[] HandData { get; private set; }
         
-        private string appPlayerPrefsKey = "appPlayerPrefs";
-        
-        public AppPlayerPrefs PlayerPreferences { get; private set; } = new AppPlayerPrefs();
-        
-        [Serializable]
-        public struct AppPlayerPrefs
-        {
-            public string username;
-            public string handTypeTitle;
+        /// <summary>The Singleton instance of the component.</summary>
+        public static Application Instance;
 
-            public AppPlayerPrefs(string username, string handTypeTitle)
-            {
-                this.username = "Anonymous";
-                this.handTypeTitle = Application.Instance.HandData?[0].title;
-            }
-        }
+        /// <summary>String used to prepend application log messages.</summary>
+        public const string LogPrepend = "<color=#e5f73b>[Application]</color> ";
+        
+
+        [Header("Internal References")]
+        
+        
+#if UNITY_WEBGL
+        /// <summary>Action callbacks called upon XR change.</summary>
+        public Action<WebXRState> OnXRChange;
+#endif        
+        
+        /// <summary>Player preferences.</summary>
+        public AppPlayerPrefs PlayerPreferences { get; private set; } = new AppPlayerPrefs();
+
+        /// <summary>The Camera Fader.</summary>
+        public CameraFader CameraFader { get; private set; }
+        
+        /// <summary>Provides functionality to allow objects to follow tracked devices.</summary>
+        public DeviceTracking DeviceTracking { get; private set; }
+
+        /// <summary>The key for player player prefs.</summary>
+        private string appPlayerPrefsKey = "appPlayerPrefs";
+
+        
         
         /// <summary>
         /// Monobehaviour lifecycle method; references are stored and variables are initialized. The GameObject is set to "Don't Destroy On Load".
         /// </summary>
         private void Awake()
         {
+            // Store the reference to the Singleton instance.
             Instance = this;
 
-            cameraFader = GetComponent<CameraFader>();
-            deviceTracking = GetComponent<DeviceTracking>();
-            
+            // Get references.
+            CameraFader = GetComponent<CameraFader>();
+            DeviceTracking = GetComponent<DeviceTracking>();
+
+            // Load preferences.
             if (PlayerPrefs.HasKey(appPlayerPrefsKey))
             {
                 string json = PlayerPrefs.GetString(appPlayerPrefsKey);
                 PlayerPreferences = JsonUtility.FromJson<AppPlayerPrefs>(json);
             }            
-            
+
+            // Set the object as persistant.
             DontDestroyOnLoad(gameObject);
         }
 
+        
+        /// <summary>
+        /// Monobehaviour lifecycle method; 
+        /// </summary>
         private void Start()
         {
-            offlinePlayerAvatar.OnMicrophonePermissionsCompleted.AddListener(OnApplicationReady);
+            // Set the camera as faded out.
+            CameraFader.SetCameraFadedOut();
             
-            cameraFader.SetCameraFadedOut();
 #if UNITY_WEBGL
+            // Add a listener to get when microphone permissions have been completed.
+            offlinePlayerAvatar.OnMicrophonePermissionsCompleted.AddListener(OnApplicationReady);
+
+            // Add an "on XR changed" listener.
             WebXRManager.OnXRChange += OnXRChanged;
 #endif
         }
 
+        
 #if UNITY_WEBGL
         
+        /// <summary>
+        /// Callback called upon the application being ready, this method calls `WebXROnApplicationReady`.
+        /// </summary>
+        public void OnApplicationReady()
+        {
+#if !UNITY_EDITOR            
+            WebXROnApplicationReady();
+#endif
+        }
+
+
+        /// <summary>
+        /// Callback called upon XR state changes, this method invokes the `OnXRChange` action callbacks.
+        /// </summary>
         private void OnXRChanged(WebXRState state, int viewsCount, Rect leftRect, Rect rightRect)
         {
             OnXRChange?.Invoke(state);
         }
 #endif
         
-        public void OnApplicationReady()
+        /// <summary>
+        /// The Player Preferences.
+        /// </summary>
+        [Serializable]
+        public struct AppPlayerPrefs
         {
-#if UNITY_WEBGL && !UNITY_EDITOR            
-            WebXROnApplicationReady();
-#endif
+            /// <summary>Username.</summary>
+            public string username;
+            
+            /// <summary>
+            /// Title of the type of hands used.
+            /// </summary>
+            public string handTypeTitle;
+
+            /// <summary>
+            /// Constructor; initializes values to default values.
+            /// </summary>
+            public AppPlayerPrefs(string username, string handTypeTitle)
+            {
+                this.username = "Anonymous";
+                this.handTypeTitle = Instance.HandData?[0].title;
+            }
         }
-        
     }
 }

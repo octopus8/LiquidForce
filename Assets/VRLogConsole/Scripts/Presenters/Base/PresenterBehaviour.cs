@@ -34,7 +34,7 @@ namespace VRLogConsole.Scripts.Presenters.Base
             {
                 if (_serviceLocator == null)
                 {
-                    _serviceLocator = FindObjectOfType<ServiceLocator>();
+                    _serviceLocator = FindAnyObjectByType<ServiceLocator>();
                     Assert.IsNotNull(_serviceLocator, "You must define a " + nameof(IServiceLocator));
                 }
                 return _serviceLocator;

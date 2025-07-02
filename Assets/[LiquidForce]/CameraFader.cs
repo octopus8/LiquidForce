@@ -84,7 +84,7 @@ namespace LiquidForce {
         private void Start()
         {
             // Set the object to follow the head.
-            Application.Instance.deviceTracking.AddHeadTarget(cameraFaderRoot);
+            Application.Instance.DeviceTracking.AddHeadFollower(cameraFaderRoot);
         }
 
 

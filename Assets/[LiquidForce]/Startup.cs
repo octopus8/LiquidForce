@@ -66,12 +66,17 @@ namespace LiquidForce
         }
 #endif
         
+        /// <summary>
+        /// Waits for a period of time, then fades the camera in. This is used at startup to give the Application
+        /// a moment to settle once ready before fading the scene in.
+        /// </summary>
+        /// <returns></returns>
         IEnumerator FadeInDelayed()
         {
             yield return new WaitForSeconds(1);
-            Application.Instance.cameraFader.FadeCameraIn();
+            _ = Application.Instance.CameraFader.FadeCameraIn();
 #if UNITY_WEBGL
-            
+
             Application.Instance.OnXRChange -= OnXRChange;
 #endif
         }
