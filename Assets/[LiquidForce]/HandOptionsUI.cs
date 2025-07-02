@@ -75,7 +75,7 @@ namespace LiquidForce
         /// </summary>
         private void InitCurrentSelection()
         {
-            string currentHandType = Application.Instance.PlayerSettings.HandType;
+            string currentHandType = Application.Instance.PlayerPreferences.handTypeTitle;
             HandOption selectedOption = options.Find(x => x.title.text == currentHandType);
             if (null != selectedOption)
             {

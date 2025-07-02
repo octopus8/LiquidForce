@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace O8C
+namespace LiquidForce
 {
     public class Comment : MonoBehaviour
     {

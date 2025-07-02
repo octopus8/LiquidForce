@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEditor;
 
 #if UNITY_EDITOR
-namespace O8C
+namespace LiquidForce
 {
 	[CustomEditor(typeof(Comment))]
 	public class CommentComponentEditor : Editor

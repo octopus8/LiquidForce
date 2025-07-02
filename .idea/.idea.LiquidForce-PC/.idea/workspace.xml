@@ -7,8 +7,13 @@
     <list default="true" id="0adbeeca-480d-43c7-9d75-f5887e9cb02c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Application.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Application.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Demo Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Demo Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Comment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/CommentEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/CommentEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandComponents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/HandComponents.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptionsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptionsUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/PlayerSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/PlayerSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[TEMP]/DevSetHands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[TEMP]/DevSetHands.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +141,8 @@
       <workItem from="1749535028998" duration="4295000" />
       <workItem from="1749706859723" duration="565000" />
       <workItem from="1751426993895" duration="5404000" />
-      <workItem from="1751435045799" duration="935000" />
+      <workItem from="1751435045799" duration="1403000" />
+      <workItem from="1751441286131" duration="2630000" />
     </task>
     <servers />
   </component>

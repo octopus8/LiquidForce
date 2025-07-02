@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Hands.Samples.VisualizerSample;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
-namespace O8C
+namespace LiquidForce
 {
 
 
@@ -19,6 +20,8 @@ namespace O8C
 
         public GameObject handParent;
 
+        
+        
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         IEnumerator Start()
@@ -32,6 +35,7 @@ namespace O8C
             handVisualizer.RightHandInteractionVisual = xrInputModalityManager.rightHand.GetComponent<HandComponents>().InteractionVisual;
 
             Debug.Log("Delayed Start Complete.");
+            
         }
 
 

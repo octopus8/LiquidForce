@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Runtime.InteropServices;
-using O8C;
 using UnityEngine;
 using XRMultiplayer;
 #if UNITY_WEBGL
@@ -21,8 +20,6 @@ namespace LiquidForce
         public static Application Instance;
         
         public string LogPrepend = "<color=#e5f73b>[Application]</color> ";
-        
-        public PlayerSettings PlayerSettings;
         
         
         
@@ -44,6 +41,26 @@ namespace LiquidForce
         [field: SerializeField]
         public HandData[] HandData { get; private set; }
         
+        private string appPlayerPrefsKey = "appPlayerPrefs";
+        
+        public AppPlayerPrefs PlayerPreferences { get; private set; } = new AppPlayerPrefs();
+        
+        [Serializable]
+        public struct AppPlayerPrefs
+        {
+            public string username;
+            public string handTypeTitle;
+
+            public AppPlayerPrefs(string username, string handTypeTitle)
+            {
+                this.username = "Anonymous";
+                this.handTypeTitle = Application.Instance.HandData?[0].title;
+            }
+        }
+        
+        /// <summary>
+        /// Monobehaviour lifecycle method; references are stored and variables are initialized. The GameObject is set to "Don't Destroy On Load".
+        /// </summary>
         private void Awake()
         {
             Instance = this;
@@ -51,7 +68,12 @@ namespace LiquidForce
             cameraFader = GetComponent<CameraFader>();
             deviceTracking = GetComponent<DeviceTracking>();
             
-            PlayerSettings = new PlayerSettings();
+            if (PlayerPrefs.HasKey(appPlayerPrefsKey))
+            {
+                string json = PlayerPrefs.GetString(appPlayerPrefsKey);
+                PlayerPreferences = JsonUtility.FromJson<AppPlayerPrefs>(json);
+            }            
+            
             DontDestroyOnLoad(gameObject);
         }
 
