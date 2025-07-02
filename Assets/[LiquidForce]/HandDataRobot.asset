@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602b0a9854d455143954f982bd1fc111, type: 3}
+  m_Name: HandDataRobot
+  m_EditorClassIdentifier: 
+  title: Robot
+  thumbnail: {fileID: 2800000, guid: 2dc421446ce852e4e8d3152894a20ea3, type: 3}
+  lefHandPrefab: {fileID: 3429237168257112930, guid: 0d37cd6ffcc8b1544a38ba33bdc16f32,
+    type: 3}
+  righHandPrefab: {fileID: 8033378475660186850, guid: deb323e11822ade41ba63aaa962a224c,
+    type: 3}

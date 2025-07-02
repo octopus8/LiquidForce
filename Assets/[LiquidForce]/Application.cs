@@ -24,6 +24,8 @@ namespace LiquidForce
         
         public PlayerSettings PlayerSettings;
         
+        
+        
         [HideInInspector]
         public CameraFader cameraFader;
         
@@ -37,6 +39,10 @@ namespace LiquidForce
         [SerializeField]
         private OfflinePlayerAvatar offlinePlayerAvatar;
         
+        /// <summary>The hand data.</summary>
+        [Tooltip("The hand data.")]
+        [field: SerializeField]
+        public HandData[] HandData { get; private set; }
         
         private void Awake()
         {
@@ -46,6 +52,7 @@ namespace LiquidForce
             deviceTracking = GetComponent<DeviceTracking>();
             
             PlayerSettings = new PlayerSettings();
+            DontDestroyOnLoad(gameObject);
         }
 
         private void Start()

@@ -20,10 +20,6 @@ namespace LiquidForce
         [Tooltip("Prototype Hand Option GameObject.")]
         [SerializeField] private GameObject prototypeOption;
         
-        /// <summary>The hand data.</summary>
-        [Tooltip("The hand data.")]
-        [SerializeField] private HandData[] handData;
-        
 #endregion
         
 
@@ -63,11 +59,11 @@ namespace LiquidForce
             // Make sure the prototype option is not active.
             prototypeOption.SetActive(false);
 
-            foreach (var handData in handData)
+            foreach (var handData in Application.Instance.HandData)
             {
                 GameObject optionGO = Instantiate(prototypeOption, prototypeOption.transform.parent);
                 var option = optionGO.GetComponent<HandOption>();
-                option.title.text = handData.name;
+                option.title.text = handData.title;
                 optionGO.SetActive(true);
                 options.Add(option);
             }
