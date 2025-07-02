@@ -41,6 +41,38 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
         [Tooltip("References either a prefab or a GameObject in the scene that will be used to visualize the right hand.")]
         GameObject m_RightHandMesh;
 
+        public GameObject LeftHandInteractionVisual
+        {
+            set
+            {
+                m_LeftHandMesh = value;
+                m_LeftHandGameObjects = new HandGameObjects(
+                    Handedness.Left,
+                    transform,
+                    m_LeftHandMesh,
+                    m_HandMeshMaterial,
+                    m_DebugDrawPrefab,
+                    m_VelocityPrefab);
+            }
+        }
+
+        public GameObject RightHandInteractionVisual
+        {
+            set
+            {
+                m_RightHandMesh = value;
+                m_RightHandGameObjects = new HandGameObjects(
+                    Handedness.Right,
+                    transform,
+                    m_RightHandMesh,
+                    m_HandMeshMaterial,
+                    m_DebugDrawPrefab,
+                    m_VelocityPrefab);
+            }
+        }
+
+
+
         [SerializeField]
         [Tooltip("(Optional) If this is set, the hand meshes will be assigned this material.")]
         Material m_HandMeshMaterial;
@@ -184,29 +216,7 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
 
             if (!foundRunningHandSubsystem)
                 return;
-
-            if (m_LeftHandGameObjects == null)
-            {
-                m_LeftHandGameObjects = new HandGameObjects(
-                    Handedness.Left,
-                    transform,
-                    m_LeftHandMesh,
-                    m_HandMeshMaterial,
-                    m_DebugDrawPrefab,
-                    m_VelocityPrefab);
-            }
-
-            if (m_RightHandGameObjects == null)
-            {
-                m_RightHandGameObjects = new HandGameObjects(
-                    Handedness.Right,
-                    transform,
-                    m_RightHandMesh,
-                    m_HandMeshMaterial,
-                    m_DebugDrawPrefab,
-                    m_VelocityPrefab);
-            }
-
+            
             UpdateRenderingVisibility(m_LeftHandGameObjects, m_Subsystem.leftHand.isTracked);
             UpdateRenderingVisibility(m_RightHandGameObjects, m_Subsystem.rightHand.isTracked);
 
@@ -307,13 +317,13 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
                 m_PreviousVelocityType = m_VelocityType;
             }
 
-            m_LeftHandGameObjects.UpdateJoints(
+            m_LeftHandGameObjects?.UpdateJoints(
                 subsystem.leftHand,
                 (updateSuccessFlags & XRHandSubsystem.UpdateSuccessFlags.LeftHandJoints) != 0,
                 m_DebugDrawJoints,
                 m_VelocityType);
 
-            m_RightHandGameObjects.UpdateJoints(
+            m_RightHandGameObjects?.UpdateJoints(
                 subsystem.rightHand,
                 (updateSuccessFlags & XRHandSubsystem.UpdateSuccessFlags.RightHandJoints) != 0,
                 m_DebugDrawJoints,

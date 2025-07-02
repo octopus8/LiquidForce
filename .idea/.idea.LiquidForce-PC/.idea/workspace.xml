@@ -6,13 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="0adbeeca-480d-43c7-9d75-f5887e9cb02c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/StartScene - Full.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/StartScene - Full.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Demo Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Demo Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Ghost00/Prefabs/Left Hand - Ghost00.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Ghost00/Prefabs/Left Hand - Ghost00.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Ghost00/Prefabs/Right Hand - Ghost00.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Ghost00/Prefabs/Right Hand - Ghost00.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,13 +94,15 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="38752">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="38752" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -130,6 +137,7 @@
       <workItem from="1749361025362" duration="7137000" />
       <workItem from="1749535028998" duration="4295000" />
       <workItem from="1749706859723" duration="565000" />
+      <workItem from="1751426993895" duration="5404000" />
     </task>
     <servers />
   </component>
@@ -154,6 +162,19 @@
           <line>162</line>
           <properties documentPath="C:\Business\Projects\O8C\LiquidForce-PC\Assets\LiquidForce\CameraFader.cs" containingFunctionPresentation="Method 'DoFade'" />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs</url>
+          <line>376</line>
+          <properties documentPath="C:\Develop\O8C\LiquidForce-PC\Assets\Samples\XR Hands\1.5.0\HandVisualizer\Scripts\HandVisualizer.cs" containingFunctionPresentation="Constructor 'HandGameObjects'">
+            <startOffsets>
+              <option value="13500" />
+            </startOffsets>
+            <endOffsets>
+              <option value="13547" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />

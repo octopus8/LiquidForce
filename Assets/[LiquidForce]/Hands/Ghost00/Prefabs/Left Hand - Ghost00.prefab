@@ -195,13 +195,14 @@ GameObject:
   - component: {fileID: 8022147721633328715}
   - component: {fileID: 8604337793995857453}
   - component: {fileID: 480083104774415394}
+  - component: {fileID: 7050105546959559313}
   m_Layer: 0
   m_Name: Left Hand - Ghost00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5718285637092832894
 Transform:
   m_ObjectHideFlags: 0
@@ -480,6 +481,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7050105546959559313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365317456457493816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23927a35be40697498b1bb476bfa7901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <InteractionVisual>k__BackingField: {fileID: 1348319592053725243}
 --- !u!1 &6556243725967300758
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +895,7 @@ PrefabInstance:
     - target: {fileID: -7009038412992213568, guid: 3e0812d0c4770b94dacf6b48c0226b50,
         type: 3}
       propertyPath: m_Materials.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -7009038412992213568, guid: 3e0812d0c4770b94dacf6b48c0226b50,
         type: 3}
