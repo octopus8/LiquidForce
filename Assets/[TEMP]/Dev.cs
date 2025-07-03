@@ -16,4 +16,11 @@ public class Dev : MonoBehaviour
     {
         
     }
+    
+    //Write a function that returns the app name. Obtain the app name from the project settings.
+    public string GetAppName()
+    {
+        return Application.productName;
+    }
+    
 }

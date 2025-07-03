@@ -76,14 +76,7 @@ namespace LiquidForce
             // Get references.
             CameraFader = GetComponent<CameraFader>();
             DeviceTracking = GetComponent<DeviceTracking>();
-
-            // Load preferences.
-            if (PlayerPrefs.HasKey(appPlayerPrefsKey))
-            {
-                string json = PlayerPrefs.GetString(appPlayerPrefsKey);
-                PlayerPreferences = JsonUtility.FromJson<AppPlayerPrefs>(json);
-            }            
-
+            
             // Set the object as persistant.
             DontDestroyOnLoad(gameObject);
         }
@@ -96,6 +89,9 @@ namespace LiquidForce
         {
             // Set the camera as faded out.
             CameraFader.SetCameraFadedOut();
+
+            // Init preferences.
+            InitPreferences();
             
 #if UNITY_WEBGL
             // Add a listener to get when microphone permissions have been completed.
@@ -105,14 +101,33 @@ namespace LiquidForce
             WebXRManager.OnXRChange += OnXRChanged;
 #endif
         }
+        
+        
+        /// <summary>
+        /// Loads player preferences from PlayerPrefs if available, otherwise initializes with default values.
+        /// </summary>
+        private void InitPreferences()
+        {
+            // Load the player preferences.
+            if (PlayerPrefs.HasKey(appPlayerPrefsKey))
+            {
+                string json = PlayerPrefs.GetString(appPlayerPrefsKey);
+                PlayerPreferences = JsonUtility.FromJson<AppPlayerPrefs>(json);
+            }
+            else
+            {
+                // Initialize with default values.
+                PlayerPreferences = new AppPlayerPrefs("Anonymous", HandData?[0].title);
+            }
+        }
 
         
+#region WebGL Functions        
 #if UNITY_WEBGL
-        
         /// <summary>
         /// Callback called upon the application being ready, this method calls `WebXROnApplicationReady`.
         /// </summary>
-        public void OnApplicationReady()
+        private void OnApplicationReady()
         {
 #if !UNITY_EDITOR            
             WebXROnApplicationReady();
@@ -128,7 +143,11 @@ namespace LiquidForce
             OnXRChange?.Invoke(state);
         }
 #endif
-        
+#endregion
+
+
+#region Data Structures
+
         /// <summary>
         /// The Player Preferences.
         /// </summary>
@@ -152,5 +171,8 @@ namespace LiquidForce
                 this.handTypeTitle = Instance.HandData?[0].title;
             }
         }
+        
+#endregion
+
     }
 }
