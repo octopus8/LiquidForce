@@ -1,7 +1,7 @@
 using System;
-using System.Collections;
-using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.XR.Hands.Samples.VisualizerSample;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using XRMultiplayer;
 #if UNITY_WEBGL
 using WebXR;
@@ -27,6 +27,8 @@ namespace LiquidForce
         private static extern void WebXROnApplicationReady();
 #endif        
 
+        #region Editor Variables
+        
         /// <summary>The `OfflinePlayerAvatar` component. This is used to detect when the application is ready.</summary>
         [SerializeField]
         private OfflinePlayerAvatar offlinePlayerAvatar;
@@ -35,16 +37,26 @@ namespace LiquidForce
         [Tooltip("An array of `HandData` ScriptableObjects that hold hand data.")]
         [field: SerializeField]
         public AppHandData[] HandData { get; private set; }
+
+        [Header("Internal References")]
+
+        /// <summary>The XR Input Modality Manager.</summary>
+        [SerializeField]
+        [Tooltip("The XR Input Modality Manager.")]
+        private XRInputModalityManager xrInputModalityManager;
+
+        /// <summary>The Hand Visualizer.</summary>
+        [SerializeField]
+        [Tooltip("The Hand Visualizer.")]
+        private HandVisualizer handParent;
+
+        #endregion
+
+        
+        #region Public Properties
         
         /// <summary>The Singleton instance of the component.</summary>
         public static Application Instance;
-
-        /// <summary>String used to prepend application log messages.</summary>
-        public const string LogPrepend = "<color=#e5f73b>[Application]</color> ";
-        
-
-        [Header("Internal References")]
-        
         
 #if UNITY_WEBGL
         /// <summary>Action callbacks called upon XR change.</summary>
@@ -59,11 +71,22 @@ namespace LiquidForce
         
         /// <summary>Provides functionality to allow objects to follow tracked devices.</summary>
         public DeviceTracking DeviceTracking { get; private set; }
+        
+        /// <summary>String used to prepend application log messages.</summary>
+        public const string LogPrepend = "<color=#e5f73b>[Application]</color> ";
+        
+        #endregion
+
+
+        #region Private Variables
 
         /// <summary>The key for player player prefs.</summary>
         private string appPlayerPrefsKey = "appPlayerPrefs";
 
+        #endregion
+
         
+        #region MonoBehaviour Lifecycle
         
         /// <summary>
         /// Monobehaviour lifecycle method; references are stored and variables are initialized. The GameObject is set to "Don't Destroy On Load".
@@ -92,7 +115,10 @@ namespace LiquidForce
 
             // Init preferences.
             InitPreferences();
-            
+
+            // Set the player hands based on the player preferences.
+            SetPlayerHands(PlayerPreferences.handTypeTitle);
+
 #if UNITY_WEBGL
             // Add a listener to get when microphone permissions have been completed.
             offlinePlayerAvatar.OnMicrophonePermissionsCompleted.AddListener(OnApplicationReady);
@@ -101,8 +127,60 @@ namespace LiquidForce
             WebXRManager.OnXRChange += OnXRChanged;
 #endif
         }
+
+        #endregion
+
         
+        #region Public Methods
+
+        public void SetPlayerHands(string handTypeTitle)
+        {
+            // Get the player hands based on the hand type title.
+            AppHandData currentHandData = null;
+            if (HandData != null)
+            {
+                foreach (var handData in HandData)
+                {
+                    if (handData.title == handTypeTitle)
+                    {
+                        currentHandData = handData;
+                        break;
+                    }
+                }
+            }
+            if (null == currentHandData)
+            {
+                return;
+            }
+
+            // Instantiate the lefthand prefab.
+            if (xrInputModalityManager.leftHand != null)
+            {
+                Destroy(xrInputModalityManager.leftHand);
+            }
+            xrInputModalityManager.leftHand = Instantiate(currentHandData.lefHandPrefab, handParent.transform);
+            handParent.LeftHandInteractionVisual = xrInputModalityManager.leftHand.GetComponent<HandComponents>().InteractionVisual;
+            
+            // Instantiate the righthand prefab.
+            if (xrInputModalityManager.rightHand != null)
+            {
+                Destroy(xrInputModalityManager.rightHand);
+            }
+            xrInputModalityManager.rightHand = Instantiate(currentHandData.rightHandPrefab, handParent.transform);
+            handParent.RightHandInteractionVisual = xrInputModalityManager.rightHand.GetComponent<HandComponents>().InteractionVisual;
+            
+            // Update the player preferences.
+            var prefs = PlayerPreferences;
+            prefs.handTypeTitle = currentHandData.title;
+            PlayerPreferences = prefs;
+        }
+
+
+        #endregion
+
         
+        #region Helper Methods
+
         /// <summary>
         /// Loads player preferences from PlayerPrefs if available, otherwise initializes with default values.
         /// </summary>
@@ -120,9 +198,11 @@ namespace LiquidForce
                 PlayerPreferences = new AppPlayerPrefs("Anonymous", HandData?[0].title);
             }
         }
+        
+        #endregion
 
         
-#region WebGL Functions        
+        #region WebGL Functions        
 #if UNITY_WEBGL
         /// <summary>
         /// Callback called upon the application being ready, this method calls `WebXROnApplicationReady`.
@@ -143,10 +223,10 @@ namespace LiquidForce
             OnXRChange?.Invoke(state);
         }
 #endif
-#endregion
+        #endregion
 
 
-#region Data Structures
+        #region Data Structures
 
         /// <summary>
         /// The Player Preferences.
@@ -172,7 +252,7 @@ namespace LiquidForce
             }
         }
         
-#endregion
+        #endregion
 
     }
 }

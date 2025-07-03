@@ -3325,6 +3325,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4607428429233221380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &421989570 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 290342406712166557, guid: 77ac6b10722bcca4a8baf70e44d89e78,
+    type: 3}
+  m_PrefabInstance: {fileID: 4607428429233221380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421989566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f46809f8654fe449ab7d8cc00386f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &426756451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4017,14 +4029,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d94eae04de9134c99ed1aab43bcce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LogPrepend: '<color=#e5f73b>[Application]</color> '
-  cameraFader: {fileID: 0}
-  deviceTracking: {fileID: 0}
   offlinePlayerAvatar: {fileID: 1655463986}
   <HandData>k__BackingField:
   - {fileID: 11400000, guid: 3e21d96ebe0dc3d4cb07277ab34305d6, type: 2}
   - {fileID: 11400000, guid: 812ad38c1cb02fd44b25e5a4aa76a264, type: 2}
   - {fileID: 11400000, guid: 817dfc9357058a647807dd8c01d107a5, type: 2}
+  xrInputModalityManager: {fileID: 4607428429233221385}
+  handParent: {fileID: 4607428429233221382}
 --- !u!114 &503592702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7890,6 +7901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51127ebb63b79ea43b1e6c374fe7d1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handOptionsUI: {fileID: 421989570}
   title: {fileID: 948310436}
 --- !u!114 &972527434
 MonoBehaviour:
@@ -8104,7 +8116,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 972527433}
+        m_TargetAssemblyTypeName: LiquidForce.HandOption, LiquidForce
+        m_MethodName: OnSelection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!222 &972527438
 CanvasRenderer:
@@ -9727,7 +9751,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1281022631}
-  - component: {fileID: 1281022630}
   m_Layer: 0
   m_Name: Dev
   m_TagString: Untagged
@@ -9735,25 +9758,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1281022630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281022629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a631bb58f63612b4086c42f38e094630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xrInputModalityManager: {fileID: 4607428429233221385}
-  handVisualizer: {fileID: 4607428429233221382}
-  leftHandPrefab: {fileID: 2365317456457493816, guid: 85ff34a51b7d924409bf5755560f501e,
-    type: 3}
-  rightHandPrefab: {fileID: 478977774926207479, guid: a01cd2d5c4f9f444e8156e95b09e48e6,
-    type: 3}
-  handParent: {fileID: 1007562417}
 --- !u!4 &1281022631
 Transform:
   m_ObjectHideFlags: 0

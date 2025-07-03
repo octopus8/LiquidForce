@@ -1,7 +1,20 @@
 using TMPro;
 using UnityEngine;
 
-public class HandOption : MonoBehaviour
+
+namespace LiquidForce
 {
-    public TextMeshProUGUI title;
+    public class HandOption : MonoBehaviour
+    {
+        [SerializeField]
+        private HandOptionsUI handOptionsUI;
+    
+        [Header("Components")]
+        public TextMeshProUGUI title;
+
+        public void OnSelection()
+        {
+            Application.Instance.SetPlayerHands(title.text);
+        }
+    }
 }

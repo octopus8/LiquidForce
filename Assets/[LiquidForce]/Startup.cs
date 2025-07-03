@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 #if UNITY_WEBGL
@@ -74,7 +73,7 @@ namespace LiquidForce
         IEnumerator FadeInDelayed()
         {
             yield return new WaitForSeconds(1);
-            _ = Application.Instance.CameraFader.FadeCameraIn();
+            _ = LiquidForce.Application.Instance.CameraFader.FadeCameraIn();
 #if UNITY_WEBGL
 
             Application.Instance.OnXRChange -= OnXRChange;

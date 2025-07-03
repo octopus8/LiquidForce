@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0adbeeca-480d-43c7-9d75-f5887e9cb02c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Tutorial/TutorialMaterials/Video_Material_Unlit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Tutorial/TutorialMaterials/Video_Material_Unlit.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/AppHandData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/AppHandData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Application.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Application.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Demo Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Demo Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandDataDefault.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandDataDefault.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandDataGlove.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandDataGlove.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandDataRobot.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandDataRobot.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptionsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptionsUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/LiquidForce.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/LiquidForce.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,13 +32,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/[LiquidForce]/HandData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[LiquidForce]/HandOption.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Runtime/TMP/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit/Runtime/Inputs/XRInputModalityManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit/Runtime/Interaction/Interactors/XRInteractionGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit/Runtime/UI/BodyUI/HandMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/49/cefc6a96/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/96/c1cde19e/UnityEvent`1.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -135,6 +148,7 @@
       <workItem from="1751426993895" duration="5404000" />
       <workItem from="1751435045799" duration="1403000" />
       <workItem from="1751441286131" duration="6554000" />
+      <workItem from="1751514871390" duration="5878000" />
     </task>
     <servers />
   </component>
