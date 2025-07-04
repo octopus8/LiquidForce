@@ -5,28 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0adbeeca-480d-43c7-9d75-f5887e9cb02c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BrokenVector/FavoritesList/Editor/ListData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BrokenVector/FavoritesList/Editor/ListData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VRMPAssets/Prefabs/UIPrefabs/Player_Appearance_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VRMPAssets/Prefabs/UIPrefabs/Player_Appearance_UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/AppHandData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/AppHandData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Application.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Application.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Demo Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Demo Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptionsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptionsUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Ghost00/Thumbnail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Ghost00/Thumbnail.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Glove00/Prefabs/Left Hand - Glove00.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Glove00/Prefabs/Left Hand - Glove00.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Glove00/Prefabs/Right Hand - Glove00.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Glove00/Prefabs/Right Hand - Glove00.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Glove00/Thumbnail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Glove00/Thumbnail.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/HandDataDefault.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/HandDataDefault.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/HandDataGlove.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/HandDataGlove.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/HandDataRobot.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/HandDataRobot.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Robot00/Prefabs/Robot00 - Left Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Robot00/Prefabs/Robot00 - Left Hand.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Robot00/Prefabs/Robot00 - Right Hand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Robot00/Prefabs/Robot00 - Right Hand.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Robot00/Thumbnail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Hands/Robot00/Thumbnail.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +141,7 @@
       <workItem from="1751435045799" duration="1403000" />
       <workItem from="1751441286131" duration="6554000" />
       <workItem from="1751514871390" duration="6981000" />
-      <workItem from="1751567189222" duration="11108000" />
+      <workItem from="1751567189222" duration="11407000" />
     </task>
     <servers />
   </component>

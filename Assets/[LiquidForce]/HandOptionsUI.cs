@@ -61,7 +61,6 @@ namespace LiquidForce
         /// <param name="title"></param>
         public void OnPointerEnter(string title)
         {
-            Debug.Log("POINTER ENTER!!!");
             HandOption selectedOption = options.Find(x => x.GetTitle() == title);
             previousThumbnail = handThumbnail.sprite;
             handThumbnail.sprite = selectedOption.GetThumbnail();

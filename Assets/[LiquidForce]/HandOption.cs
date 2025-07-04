@@ -44,7 +44,6 @@ namespace LiquidForce
 
         public void OnSelection()
         {
-            Debug.Log("Value Changed");
             handOptionsUI.OnSelection(title.text);
         }
     }
