@@ -123,7 +123,7 @@ namespace LiquidForce
             SetPlayerHands(PlayerPreferences.handTypeTitle);
             
             xrInputModalityManager.trackedHandModeStarted.AddListener(TrackedHandModeStarted);
-            xrInputModalityManager.trackedHandModeStarted.AddListener(TrackedHandModeEnded);
+            xrInputModalityManager.motionControllerModeStarted.AddListener(TrackedHandModeEnded);
 
 #if UNITY_WEBGL
             // Add a listener to get when microphone permissions have been completed.
