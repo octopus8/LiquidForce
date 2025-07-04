@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HandDataGlove
   m_EditorClassIdentifier: 
   title: Glove
-  thumbnail: {fileID: 2800000, guid: 5abb74a68b5d90945b8725ff308a3344, type: 3}
+  thumbnail: {fileID: 21300000, guid: 5abb74a68b5d90945b8725ff308a3344, type: 3}
   lefHandPrefab: {fileID: 4349088908478319146, guid: 543878c0c3b547a46ba02ce6d06de053,
     type: 3}
   rightHandPrefab: {fileID: 3382968454612714908, guid: 66832c7740a96a5469daf4155115d11f,

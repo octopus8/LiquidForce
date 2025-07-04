@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
@@ -12,7 +13,7 @@ namespace LiquidForce
     public class HandOptionsUI : MonoBehaviour
     {
         
-#region Component Parameters
+		#region Component Parameters
 
         [Header("Resources")]
         
@@ -20,20 +21,24 @@ namespace LiquidForce
         [Tooltip("Prototype Hand Option GameObject.")]
         [SerializeField] private GameObject prototypeOption;
         
-#endregion
+        [SerializeField] private Image handThumbnail;
+        
+		#endregion
         
 
 
-#region Class Variables
+		#region Class Variables
         
         /// <summary>List of created options.</summary>
         private List<HandOption> options = new();
         
-#endregion
+        private Sprite previousThumbnail;
+        
+		#endregion
 
 
 
-#region MonoBehaviour Functions
+		#region MonoBehaviour Functions
 
         /// <summary>
         /// MonoBehaviour lifecycle method; populates and initializes the list of available hand options.
@@ -42,14 +47,61 @@ namespace LiquidForce
         {
             PopulateOptionList();
 
-            InitCurrentSelection();
+            HandOption selectedOption = options.Find(x => x.GetTitle() == Application.Instance.PlayerPreferences.handTypeTitle);
+            selectedOption.GetComponent<Toggle>().Select();
+            selectedOption.OnSelection();
         }
 
-#endregion
+		#endregion
 
 
+        /// <summary>
+        /// Stores the current thumbnail and updates the hand thumbnail to the selected option's thumbnail.
+        /// </summary>
+        /// <param name="title"></param>
+        public void OnPointerEnter(string title)
+        {
+            Debug.Log("POINTER ENTER!!!");
+            HandOption selectedOption = options.Find(x => x.GetTitle() == title);
+            previousThumbnail = handThumbnail.sprite;
+            handThumbnail.sprite = selectedOption.GetThumbnail();
+        }
 
-#region Helper Functions
+        
+        /// <summary>
+        /// Restores the previous thumbnail when the pointer exits the option.
+        /// </summary>
+        /// <param name="title"></param>
+        public void OnPointerExit(string title)
+        {
+            if (previousThumbnail != null)
+            {
+                handThumbnail.sprite = previousThumbnail;
+            }
+        }
+
+        
+        /// <summary>
+        /// Sets the selected option as the active hand type and updates the thumbnail.
+        /// </summary>
+        /// <param name="title"></param>
+        public void OnSelection(string title)
+        {
+            HandOption selectedOption = options.Find(x => x.GetTitle() == title);
+            if (null != selectedOption)
+            {
+                handThumbnail.sprite = previousThumbnail = selectedOption.GetThumbnail();
+            }
+            else
+            {
+                Debug.LogError("Hand option not found: " + title);
+            }
+            
+            Application.Instance.SetPlayerHands(title);
+        }
+
+
+		#region Helper Functions
 
         /// <summary>
         /// Populates the list of options.
@@ -63,31 +115,13 @@ namespace LiquidForce
             {
                 GameObject optionGO = Instantiate(prototypeOption, prototypeOption.transform.parent);
                 var option = optionGO.GetComponent<HandOption>();
-                option.title.text = handData.title;
+                option.Init(handData.title, handData.thumbnail);
                 optionGO.SetActive(true);
                 options.Add(option);
             }
         }
 
-        
-        /// <summary>
-        /// Initializes the current selection.
-        /// </summary>
-        private void InitCurrentSelection()
-        {
-            string currentHandType = Application.Instance.PlayerPreferences.handTypeTitle;
-            HandOption selectedOption = options.Find(x => x.title.text == currentHandType);
-            if (null != selectedOption)
-            {
-                selectedOption.GetComponent<Toggle>().isOn = true;
-            }
-            else
-            {
-                options[0].GetComponent<Toggle>().isOn = true;
-            }
-        }
-        
-#endregion
+        #endregion
 
     }
 }

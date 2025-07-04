@@ -82,6 +82,8 @@ namespace LiquidForce
 
         /// <summary>The key for player player prefs.</summary>
         private string appPlayerPrefsKey = "appPlayerPrefs";
+        
+        private bool isTrackingHands = false;
 
         #endregion
 
@@ -100,6 +102,9 @@ namespace LiquidForce
             CameraFader = GetComponent<CameraFader>();
             DeviceTracking = GetComponent<DeviceTracking>();
             
+            // Init preferences.
+            InitPreferences();
+            
             // Set the object as persistant.
             DontDestroyOnLoad(gameObject);
         }
@@ -113,11 +118,12 @@ namespace LiquidForce
             // Set the camera as faded out.
             CameraFader.SetCameraFadedOut();
 
-            // Init preferences.
-            InitPreferences();
 
             // Set the player hands based on the player preferences.
             SetPlayerHands(PlayerPreferences.handTypeTitle);
+            
+            xrInputModalityManager.trackedHandModeStarted.AddListener(TrackedHandModeStarted);
+            xrInputModalityManager.trackedHandModeStarted.AddListener(TrackedHandModeEnded);
 
 #if UNITY_WEBGL
             // Add a listener to get when microphone permissions have been completed.
@@ -126,6 +132,13 @@ namespace LiquidForce
             // Add an "on XR changed" listener.
             WebXRManager.OnXRChange += OnXRChanged;
 #endif
+        }
+
+
+        private void OnDestroy()
+        {
+            xrInputModalityManager.trackedHandModeStarted.RemoveListener(TrackedHandModeStarted);
+            xrInputModalityManager.trackedHandModeStarted.RemoveListener(TrackedHandModeEnded);
         }
 
         #endregion
@@ -160,6 +173,7 @@ namespace LiquidForce
             }
             xrInputModalityManager.leftHand = Instantiate(currentHandData.lefHandPrefab, handParent.transform);
             handParent.LeftHandInteractionVisual = xrInputModalityManager.leftHand.GetComponent<HandComponents>().InteractionVisual;
+            xrInputModalityManager.leftHand.SetActive(isTrackingHands);
             
             // Instantiate the righthand prefab.
             if (xrInputModalityManager.rightHand != null)
@@ -168,6 +182,7 @@ namespace LiquidForce
             }
             xrInputModalityManager.rightHand = Instantiate(currentHandData.rightHandPrefab, handParent.transform);
             handParent.RightHandInteractionVisual = xrInputModalityManager.rightHand.GetComponent<HandComponents>().InteractionVisual;
+            xrInputModalityManager.rightHand.SetActive(isTrackingHands);
             
             // Update the player preferences.
             var prefs = PlayerPreferences;
@@ -198,6 +213,17 @@ namespace LiquidForce
                 PlayerPreferences = new AppPlayerPrefs("Anonymous", HandData?[0].title);
             }
         }
+
+        private void TrackedHandModeStarted()
+        {
+            isTrackingHands = true;
+        }
+
+        private void TrackedHandModeEnded()
+        {
+            isTrackingHands = false;
+        }
+        
         
         #endregion
 
@@ -248,7 +274,7 @@ namespace LiquidForce
             public AppPlayerPrefs(string username, string handTypeTitle)
             {
                 this.username = "Anonymous";
-                this.handTypeTitle = Instance.HandData?[0].title;
+                this.handTypeTitle = handTypeTitle;
             }
         }
         

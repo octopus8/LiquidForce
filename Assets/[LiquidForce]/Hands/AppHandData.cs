@@ -4,7 +4,7 @@ using UnityEngine;
 public class AppHandData : ScriptableObject
 {
     public string title;
-    public Texture2D thumbnail;
+    public Sprite thumbnail;
     public GameObject lefHandPrefab;
     public GameObject rightHandPrefab;
 

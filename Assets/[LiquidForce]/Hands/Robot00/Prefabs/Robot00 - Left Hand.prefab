@@ -91,13 +91,14 @@ GameObject:
   - component: {fileID: 5553399812858608869}
   - component: {fileID: 1923947853663346824}
   - component: {fileID: 6860861025015508119}
+  - component: {fileID: 712216999807286209}
   m_Layer: 0
   m_Name: Robot00 - Left Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5842440812187412404
 Transform:
   m_ObjectHideFlags: 0
@@ -376,6 +377,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &712216999807286209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3429237168257112930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23927a35be40697498b1bb476bfa7901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <InteractionVisual>k__BackingField: {fileID: 3237879119319220595}
 --- !u!1 &4791444704736210647
 GameObject:
   m_ObjectHideFlags: 0

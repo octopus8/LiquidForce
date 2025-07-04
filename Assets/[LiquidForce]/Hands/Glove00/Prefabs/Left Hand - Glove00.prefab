@@ -457,6 +457,7 @@ GameObject:
   - component: {fileID: 6440150712035366712}
   - component: {fileID: 1715141792064395297}
   - component: {fileID: 4486211561700411458}
+  - component: {fileID: 5814068902362234324}
   m_Layer: 0
   m_Name: Left Hand - Glove00
   m_TagString: Untagged
@@ -742,6 +743,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5814068902362234324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4349088908478319146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23927a35be40697498b1bb476bfa7901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <InteractionVisual>k__BackingField: {fileID: 3432871821171998170}
 --- !u!1 &8904151418312785648
 GameObject:
   m_ObjectHideFlags: 0

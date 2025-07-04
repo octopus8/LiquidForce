@@ -28,15 +28,15 @@ MonoBehaviour:
   - type: 0
     actualReference: {fileID: 0}
     cachedDrawData:
-      Name: Hands
-      Icon: {fileID: 8597360482269930223, guid: 0000000000000000d000000000000000,
+      Name: Player_Appearance_UI
+      Icon: {fileID: 7853449062886713960, guid: 0000000000000000d000000000000000,
         type: 0}
       SceneData:
         IsScene: 0
         Scene: {fileID: 0}
     cachedTypes:
     - GameObject
-    - Transform
-    - HandVisualizer
+    - RectTransform
+    - PlayerAppearanceMenu
     sceneGUID: ca2f88aa05b33a44e9e36ccb44cdd7df
-    localIdentifier: 0
+    localIdentifier: 1707932470
