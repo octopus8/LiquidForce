@@ -46,6 +46,11 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
             set
             {
                 m_LeftHandMesh = value;
+                if (null != m_LeftHandGameObjects)
+                {
+                    m_LeftHandGameObjects.OnDestroy();
+                    m_LeftHandGameObjects = null;
+                }
                 m_LeftHandGameObjects = new HandGameObjects(
                     Handedness.Left,
                     transform,
@@ -53,6 +58,7 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
                     m_HandMeshMaterial,
                     m_DebugDrawPrefab,
                     m_VelocityPrefab);
+                m_LeftHandGameObjects.ToggleDebugDrawJoints(m_DebugDrawJoints);
             }
         }
 
@@ -61,6 +67,11 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
             set
             {
                 m_RightHandMesh = value;
+                if (null != m_RightHandGameObjects)
+                {
+                    m_RightHandGameObjects.OnDestroy();
+                    m_RightHandGameObjects = null;
+                }
                 m_RightHandGameObjects = new HandGameObjects(
                     Handedness.Right,
                     transform,
@@ -68,6 +79,7 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
                     m_HandMeshMaterial,
                     m_DebugDrawPrefab,
                     m_VelocityPrefab);
+                m_RightHandGameObjects.ToggleDebugDrawJoints(m_DebugDrawJoints);
             }
         }
 
@@ -358,6 +370,10 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
                     Transform drawJointsParent)
                 {
                     var jointIndex = jointId.ToIndex();
+                    if (m_DrawJoints[jointIndex] != null)
+                    {
+                        Destroy(m_DrawJoints[jointIndex]);
+                    }
                     m_DrawJoints[jointIndex] = Instantiate(debugDrawPrefab);
                     m_DrawJoints[jointIndex].transform.parent = drawJointsParent;
                     m_DrawJoints[jointIndex].name = jointId.ToString();
