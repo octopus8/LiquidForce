@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.Hands.Samples.VisualizerSample;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using XRMultiplayer;
@@ -49,6 +50,9 @@ namespace LiquidForce
         [SerializeField]
         [Tooltip("The Hand Visualizer.")]
         private HandVisualizer handParent;
+        
+        [SerializeField]
+        private SceneData[] sceneData;
 
         #endregion
 
@@ -124,6 +128,8 @@ namespace LiquidForce
             
             xrInputModalityManager.trackedHandModeStarted.AddListener(TrackedHandModeStarted);
             xrInputModalityManager.motionControllerModeStarted.AddListener(TrackedHandModeEnded);
+
+            SceneManager.LoadSceneAsync(sceneData[0].scenePath, LoadSceneMode.Additive);
 
 #if UNITY_WEBGL
             // Add a listener to get when microphone permissions have been completed.
@@ -276,6 +282,13 @@ namespace LiquidForce
                 this.username = "Anonymous";
                 this.handTypeTitle = handTypeTitle;
             }
+        }
+
+        [Serializable]
+        public struct SceneData
+        {
+            public string sceneName;
+            public string scenePath;
         }
         
         #endregion
