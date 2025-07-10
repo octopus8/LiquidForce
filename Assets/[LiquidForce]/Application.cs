@@ -122,14 +122,32 @@ namespace LiquidForce
             // Set the camera as faded out.
             CameraFader.SetCameraFadedOut();
 
-
             // Set the player hands based on the player preferences.
             SetPlayerHands(PlayerPreferences.handTypeTitle);
-            
+
             xrInputModalityManager.trackedHandModeStarted.AddListener(TrackedHandModeStarted);
             xrInputModalityManager.motionControllerModeStarted.AddListener(TrackedHandModeEnded);
 
-            SceneManager.LoadSceneAsync(sceneData[0].scenePath, LoadSceneMode.Additive);
+            // Load the scene async and position the offlinePlayerAvatar after loading.
+            var asyncOp = SceneManager.LoadSceneAsync(sceneData[0].scenePath, LoadSceneMode.Additive);
+            asyncOp.completed += (op) =>
+            {
+                // Find the loaded scene by path
+                var loadedScene = SceneManager.GetSceneByPath(sceneData[0].scenePath);
+                if (loadedScene.IsValid())
+                {
+                    GameObject[] rootObjects = loadedScene.GetRootGameObjects();
+                    foreach (var go in rootObjects)
+                    {
+                        if (go.name == "Start Transform")
+                        {
+                            offlinePlayerAvatar.transform.position = go.transform.position;
+                            offlinePlayerAvatar.transform.rotation = go.transform.rotation;
+                            break;
+                        }
+                    }
+                }
+            };
 
 #if UNITY_WEBGL
             // Add a listener to get when microphone permissions have been completed.
