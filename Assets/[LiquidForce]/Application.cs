@@ -30,6 +30,10 @@ namespace LiquidForce
 
         #region Editor Variables
         
+        [SerializeField]
+        private GameObject xrOrigin;
+        
+        
         /// <summary>The `OfflinePlayerAvatar` component. This is used to detect when the application is ready.</summary>
         [SerializeField]
         private OfflinePlayerAvatar offlinePlayerAvatar;
@@ -132,8 +136,9 @@ namespace LiquidForce
             var asyncOp = SceneManager.LoadSceneAsync(sceneData[0].scenePath, LoadSceneMode.Additive);
             asyncOp.completed += (op) =>
             {
+                var success = false;
                 // Find the loaded scene by path
-                var loadedScene = SceneManager.GetSceneByPath(sceneData[0].scenePath);
+                var loadedScene = SceneManager.GetSceneByPath("Assets/" + sceneData[0].scenePath + ".unity");
                 if (loadedScene.IsValid())
                 {
                     GameObject[] rootObjects = loadedScene.GetRootGameObjects();
@@ -141,11 +146,16 @@ namespace LiquidForce
                     {
                         if (go.name == "Start Transform")
                         {
-                            offlinePlayerAvatar.transform.position = go.transform.position;
-                            offlinePlayerAvatar.transform.rotation = go.transform.rotation;
+                            xrOrigin.transform.position = go.transform.position;
+                            xrOrigin.transform.rotation = go.transform.rotation;
+                            success = true;
                             break;
                         }
                     }
+                }
+                if (!success)
+                {
+                    Debug.LogError(LogPrepend + "Failed to find 'Start Transform' in the loaded scene: " + sceneData[0].sceneName);
                 }
             };
 
