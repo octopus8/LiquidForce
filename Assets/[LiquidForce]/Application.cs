@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Hands.Samples.VisualizerSample;
@@ -55,8 +56,8 @@ namespace LiquidForce
         [Tooltip("The Hand Visualizer.")]
         private HandVisualizer handParent;
         
-        [SerializeField]
-        private SceneData[] sceneData;
+        [field: SerializeField]
+        public SceneData[] Locations {  get; private set; }
 
         #endregion
 
@@ -92,6 +93,8 @@ namespace LiquidForce
         private string appPlayerPrefsKey = "appPlayerPrefs";
         
         private bool isTrackingHands = false;
+        
+        public string CurrentLocation { private set; get; } = string.Empty;
 
         #endregion
 
@@ -132,32 +135,7 @@ namespace LiquidForce
             xrInputModalityManager.trackedHandModeStarted.AddListener(TrackedHandModeStarted);
             xrInputModalityManager.motionControllerModeStarted.AddListener(TrackedHandModeEnded);
 
-            // Load the scene async and position the offlinePlayerAvatar after loading.
-            var asyncOp = SceneManager.LoadSceneAsync(sceneData[0].scenePath, LoadSceneMode.Additive);
-            asyncOp.completed += (op) =>
-            {
-                var success = false;
-                // Find the loaded scene by path
-                var loadedScene = SceneManager.GetSceneByPath("Assets/" + sceneData[0].scenePath + ".unity");
-                if (loadedScene.IsValid())
-                {
-                    GameObject[] rootObjects = loadedScene.GetRootGameObjects();
-                    foreach (var go in rootObjects)
-                    {
-                        if (go.name == "Start Transform")
-                        {
-                            xrOrigin.transform.position = go.transform.position;
-                            xrOrigin.transform.rotation = go.transform.rotation;
-                            success = true;
-                            break;
-                        }
-                    }
-                }
-                if (!success)
-                {
-                    Debug.LogError(LogPrepend + "Failed to find 'Start Transform' in the loaded scene: " + sceneData[0].sceneName);
-                }
-            };
+            SetLocation(Locations[0].sceneName);
 
 #if UNITY_WEBGL
             // Add a listener to get when microphone permissions have been completed.
@@ -224,6 +202,50 @@ namespace LiquidForce
             PlayerPreferences = prefs;
         }
 
+        
+        
+        public void SetLocation(string locationName)
+        {
+            // Find the scene data for the given location name.
+            SceneData sceneData = Array.Find(Locations, x => x.sceneName == locationName);
+            if (sceneData.Equals(default(SceneData)))
+            {
+                Debug.LogError(LogPrepend + "Location not found: " + locationName);
+                return;
+            }
+
+            // Load the scene async and position the xrOrigin after loading.
+            var asyncOp = SceneManager.LoadSceneAsync(sceneData.scenePath, LoadSceneMode.Additive);
+            asyncOp.completed += (op) =>
+            {
+                var success = false;
+                // Find the loaded scene by path
+                var loadedScene = SceneManager.GetSceneByPath("Assets/" + sceneData.scenePath + ".unity");
+                if (loadedScene.IsValid())
+                {
+                    GameObject[] rootObjects = loadedScene.GetRootGameObjects();
+                    foreach (var go in rootObjects)
+                    {
+                        if (go.name == "Start Transform")
+                        {
+                            xrOrigin.transform.position = go.transform.position;
+                            xrOrigin.transform.rotation = go.transform.rotation;
+                            success = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (success)
+                {
+                    CurrentLocation = locationName;
+                }
+                else
+                {
+                    Debug.LogError(LogPrepend + "Failed to find 'Start Transform' in the loaded scene: " + sceneData.sceneName);
+                }
+            };
+        }
 
         #endregion
 

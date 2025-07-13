@@ -107,6 +107,7 @@ namespace LiquidForce
         /// </summary>
         private void PopulateOptionList()
         {
+            options.Clear();
             // Make sure the prototype option is not active.
             prototypeOption.SetActive(false);
 

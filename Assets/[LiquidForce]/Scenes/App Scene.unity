@@ -2936,11 +2936,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 817dfc9357058a647807dd8c01d107a5, type: 2}
   xrInputModalityManager: {fileID: 4607428429233221385}
   handParent: {fileID: 4607428429233221382}
-  sceneData:
-  - sceneName: Las Vegas Home
-    scenePath: '[LiquidForce]/Scenes/LVHome'
+  <Locations>k__BackingField:
   - sceneName: Demo Scene
     scenePath: '[LiquidForce]/Scenes/Demo Scene'
+  - sceneName: LVHome
+    scenePath: '[LiquidForce]/Scenes/LVHome'
 --- !u!114 &503592702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3495,8 +3495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prototypeOption: {fileID: 1907219260}
-  locations:
-  - sceneName: 
+  playerOptions: {fileID: 551853555}
 --- !u!1 &694972108
 GameObject:
   m_ObjectHideFlags: 0
@@ -6228,10 +6227,10 @@ RectTransform:
   - {fileID: 1961418714}
   m_Father: {fileID: 421989569}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 60}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 154.055, y: -259.39}
+  m_SizeDelta: {x: 308.11, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &995859088
 GameObject:
@@ -11755,6 +11754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dbab7c5482bd6041b7977b4219852c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locationPanel: {fileID: 607142233}
   title: {fileID: 545699524}
 --- !u!1 &1945451198
 GameObject:
@@ -12684,27 +12684,27 @@ PrefabInstance:
     - target: {fileID: 629571589621892077, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 629571589621892077, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 629571589621892077, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 308.11
       objectReference: {fileID: 0}
     - target: {fileID: 629571589621892077, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 154.055
       objectReference: {fileID: 0}
     - target: {fileID: 629571589621892077, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -108.945
       objectReference: {fileID: 0}
     - target: {fileID: 756716379191439984, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
@@ -13175,7 +13175,7 @@ PrefabInstance:
     - target: {fileID: 4735054153897537602, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4854752157420125466, guid: 77ac6b10722bcca4a8baf70e44d89e78,
         type: 3}

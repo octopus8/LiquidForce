@@ -13,18 +13,6 @@ MonoBehaviour:
   m_Name: ListData
   m_EditorClassIdentifier: 
   References:
-  - type: 1
-    actualReference: {fileID: 102900000, guid: ca2f88aa05b33a44e9e36ccb44cdd7df, type: 3}
-    cachedDrawData:
-      Name: Demo Scene
-      Icon: {fileID: 985423054452513129, guid: 0000000000000000d000000000000000, type: 0}
-      SceneData:
-        IsScene: 1
-        Scene: {fileID: 102900000, guid: ca2f88aa05b33a44e9e36ccb44cdd7df, type: 3}
-    cachedTypes:
-    - SceneAsset
-    sceneGUID: 
-    localIdentifier: 0
   - type: 0
     actualReference: {fileID: 0}
     cachedDrawData:
@@ -40,3 +28,15 @@ MonoBehaviour:
     - PlayerAppearanceMenu
     sceneGUID: ca2f88aa05b33a44e9e36ccb44cdd7df
     localIdentifier: 1707932470
+  - type: 1
+    actualReference: {fileID: 102900000, guid: ca2f88aa05b33a44e9e36ccb44cdd7df, type: 3}
+    cachedDrawData:
+      Name: App Scene
+      Icon: {fileID: 985423054452513129, guid: 0000000000000000d000000000000000, type: 0}
+      SceneData:
+        IsScene: 1
+        Scene: {fileID: 102900000, guid: ca2f88aa05b33a44e9e36ccb44cdd7df, type: 3}
+    cachedTypes:
+    - SceneAsset
+    sceneGUID: 
+    localIdentifier: 0
