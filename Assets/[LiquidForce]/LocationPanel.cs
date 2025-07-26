@@ -57,6 +57,12 @@ namespace LiquidForce
             Application.Instance.SetLocation(title);
 //            playerOptions.ToggleMenu();
         }
+        
+        private void SetLocation(string title)
+        {
+            Application.Instance.SetLocation(title);
+            playerOptions.ToggleMenu();
+        }
 
     }
 }

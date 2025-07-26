@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/[LiquidForce]/Scenes/LVHome.unity
     guid: 85c09e1afa20e4341944e7c051c13e1f
+  - enabled: 1
+    path: Assets/[LiquidForce]/Scenes/LVApt.unity
+    guid: 84d3e929e1eadad43a86f4422b4aea6e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 152a4d8ddd9c29448993081a6511cd94,
       type: 2}

@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0adbeeca-480d-43c7-9d75-f5887e9cb02c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LiquidForce-PC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BrokenVector/FavoritesList/Editor/ListData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BrokenVector/FavoritesList/Editor/ListData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Application.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Application.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptionsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/HandOptionsUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/LocationPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/LocationPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/LocationPanelOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/LocationPanelOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Scenes/App Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Scenes/App Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Scenes/LVHome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Scenes/LVHome.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[LiquidForce]/Scenes/LVHome/Meshes/LVHome.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[LiquidForce]/Scenes/LVHome/Meshes/LVHome.fbx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +149,7 @@
       <workItem from="1751864842782" duration="1638000" />
       <workItem from="1752131576855" duration="1386000" />
       <workItem from="1752211756606" duration="883000" />
+      <workItem from="1753490112883" duration="1253000" />
     </task>
     <servers />
   </component>
