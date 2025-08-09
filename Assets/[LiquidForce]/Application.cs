@@ -1,11 +1,11 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Hands.Samples.VisualizerSample;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using XRMultiplayer;
 #if UNITY_WEBGL
+using System.Runtime.InteropServices;
 using WebXR;
 #endif
 
