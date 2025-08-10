@@ -11,60 +11,70 @@ public class TileTreePositioner : MonoBehaviour
     [Serializable]
     class TreeTile
     {
+        public string name;
+        public Axis axis = Axis.Z;
         public GameObject[] tiles;
-        public GameObject parent;
-        public Axis axis;
     }
     
     [Serializable]
     enum Axis
     {
         X,
-        Y,
-        Z
+        Z,
+        NegativeX,
+        NegativeZ
     }
 
 
     /// <summary>
-    /// Goes through all the tiles and positions them appropriately based on their axis and parent.
-    /// This method is intended to be called from the editor to position tiles in the scene.
-    /// It does not perform any runtime logic and is purely for editor use.
+    /// Positions the tiles in a tree structure based on the specified axis and tile size.
     /// </summary>
     public void PositionTiles()
     {
+        if (tiles == null || tiles.Length == 0)
+        {
+            Debug.LogWarning("No tiles to position.");
+            return;
+        }
+
         foreach (var tile in tiles)
         {
-            if (tile.parent == null || tile.tiles == null || tile.tiles.Length == 0)
+            if (tile.tiles == null || tile.tiles.Length == 0)
             {
-                Debug.LogWarning("Tile parent or tiles are not set up correctly.");
+                Debug.LogWarning("No tiles in this group to position.");
                 continue;
             }
 
-            Vector3 parentPosition = tile.parent.transform.position;
-
-            for (int i = 0; i < tile.tiles.Length; i++)
+            for (int i = 1; i < tile.tiles.Length; i++)
             {
-                GameObject currentTile = tile.tiles[i];
-                if (currentTile == null) continue;
-
-                Vector3 positionOffset = Vector3.zero;
-
+                Vector3 vec = new Vector3(0, 0, tileSize);
+                Quaternion rot = Quaternion.identity; 
                 switch (tile.axis)
                 {
                     case Axis.X:
-                        positionOffset = new Vector3(i * tileSize, 0, 0);
-                        break;
-                    case Axis.Y:
-                        positionOffset = new Vector3(0, i * tileSize, 0);
+                        vec = new Vector3(tileSize, 0, 0);
+                        rot = Quaternion.Euler(0, 0, tile.tiles[i - 1].transform.rotation.eulerAngles.x);
                         break;
                     case Axis.Z:
-                        positionOffset = new Vector3(0, 0, i * tileSize);
+                        vec = new Vector3(0, 0, tileSize);
+                        rot = Quaternion.Euler(tile.tiles[i - 1].transform.rotation.eulerAngles.x, 0, 0);
+                        break;
+                    case Axis.NegativeX:
+                        vec = new Vector3(-tileSize, 0, 0);
+                        rot = Quaternion.Euler(0, 0, tile.tiles[i - 1].transform.rotation.eulerAngles.x);
+                        break;
+                    case Axis.NegativeZ:
+                        vec = new Vector3(0, 0, -tileSize);
+                        rot = Quaternion.Euler(tile.tiles[i - 1].transform.rotation.eulerAngles.x, 0, 0);
                         break;
                 }
-
-                currentTile.transform.position = parentPosition + positionOffset;
+                vec = rot * vec;
+                vec += tile.tiles[i - 1].transform.position;
+                
+                tile.tiles[i].transform.position = vec;
             }
         }
         Debug.Log("Tiles positioned successfully.");
     }
+
 }
